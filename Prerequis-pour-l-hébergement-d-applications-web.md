@@ -3,17 +3,13 @@ Prérequis pour l’hébergement d’applications web
 
 Éléments non exhaustifs, configuration définitive laissée à l’appréciation de l’Hébergeur
 
-version : 1.0
+* version : 1.0
+* auteurs : Ronan Guilloux, Les Polypodes SARL (Nantes, France)
+* licence : http://creativecommons.org/licenses/by-sa/3.0/fr/ 
 
-Auteurs : 
-
-* Ronan Guilloux, Les Polypodes SARL (Nantes, France)
-
-Licence : http://creativecommons.org/licenses/by-sa/3.0/fr/ 
 
 Contexte
 --------
-
 
 Pour l’hébergement de sites web ou d’’applications web basées sur le framework Symfony2,
 l'agence Les Polypodes propose un document non exhaustif de prérequis techniques,
@@ -69,12 +65,14 @@ Configuration de PHP (cli et apache2) :
     detect_unicode = Off
 ```
 
+
 Logiciels en ligne de commande utiles aux développeurs
 ------------------------------------------------------
 
     imagemagick rsync git vim curl tree lynx ack-grep pandoc most exuberant-ctags linux-headers-generic build-essential manpages-fr manpages-fr-extra manpages-dev nodejs npm
 
 Pour nodejs, utiliser le dépot PPA `ppa:chris-lea/node.js`. NodeJs n'est pas utilisé ici en tant que serveur web mais en tant qu'utilitaire CLI uniquement.
+
 
 Logiciels web utiles aux développeurs
 -------------------------------------
@@ -90,10 +88,11 @@ Apache2 mods à activer
     rewrite headers deflate expires setenvif
 ```
 
+
 2. Limites, conseil et assistance
 ---------------------------------
 
-En dehor des points indiqués comme optionnels, tous ces points sont importants et peuvent devenir bloquants pour le succès du déploiement de l’application web baséee. Sur ces points, l'Agence Les Polypodes demande a être prévenue dès qu'une incompréhension ou un doute survient du côté de l'Hébergeur qui doit livrer l’hébergement et éventuellement assurer l’infogérance de l’application, et se tient prête à expliquer le détail et la raison de chaque pré-requis. 
+En-dehors des points indiqués comme optionnels, tous ces points sont importants et peuvent devenir bloquants pour le succès du déploiement de l’application web baséee. Sur ces points, l'Agence Les Polypodes demande a être prévenue dès qu'une incompréhension ou un doute survient du côté de l'Hébergeur qui doit livrer l’hébergement et éventuellement assurer l’infogérance de l’application, et se tient prête à expliquer le détail et la raison de chaque pré-requis. 
 
 Il revient au Client Final de créer les conditions et les occasions de dialogues entre l’hébergeur et l'Agence pour la bonne conduite et le succès du projet. 
 
