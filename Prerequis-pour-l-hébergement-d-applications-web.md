@@ -18,7 +18,7 @@ l'agence Les Polypodes propose un document non exhaustif de prérequis technique
 But
 ---
 
-Le but de ce document est de donner les éléments minimaux pour l'hébergement d'applications PHP basés sur
+Le but de ce document est de donner les éléments minimaux pour l'hébergement d'applications PHP basées sur
 
 * Symfony 2.*
 * Silex 1.*
