@@ -42,7 +42,7 @@ Rôles et vocabulaire
 * PHP 5.4.* ou supérieure, stable 
 * Apache 2.2.* ou supérieure, stable
 * MySQL 5.5.* ou supérieure, stable
-* 1 utilisateur linux "polypodes" avec des droits nécessaires pour reloader Apache2 et éditer uen crontab ; rendre si possible cet utilisateur membre du même que celui utilisé par Apache2 (:www-data)
+* 1 utilisateur linux "polypodes" avec des droits nécessaires pour reloader Apache2 et éditer une crontab ; ajouter si possible cet utilisateur au usergroup utilisé par Apache2 (:www-data)
 
 
 Configuration du serveur
