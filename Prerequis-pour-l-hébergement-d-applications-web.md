@@ -33,11 +33,11 @@ Rôles et vocabulaire
 * le Client final est l'entité qui réalise la commande et la recette l’application et son hébergement.
 
 
-1. Prérequis généraux : 
------------------------
+1. Prérequis généraux minimaux : 
+--------------------------------
 
 * OS Linux, dernière version stable (LTS optionnel, pas formellement demandée). Préférence de l'équipe pour Debian ou Ubuntu, nous laissons l’Hébergeur juger de la meilleure distribution à utiliser.
-* 1 Core + 4 Giga RAM minimum
+* 1 Core + 4 Giga RAM *minimum*
 * architecture 64 bits
 * PHP 5.4.* ou supérieure, stable 
 * Apache 2.2.* ou supérieure, stable
