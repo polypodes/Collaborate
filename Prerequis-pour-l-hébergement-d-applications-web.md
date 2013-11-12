@@ -42,8 +42,9 @@ server datetime = “Europe/Paris”
 ```
 
 Extensions de PHP :
+
 ```
-    php-apc php5-mysql php5-cli php5-curl php-pear php5-gd php5-imagick php5-imap php5-xsl php5-common php5-mcrypt php5-ps php5-pspell php5-recode php5-snmp php5-tidy php5-intl
+php-apc php5-mysql php5-cli php5-curl php-pear php5-gd php5-imagick php5-imap php5-xsl php5-common php5-mcrypt php5-ps php5-pspell php5-recode php5-snmp php5-tidy php5-intl
 ```
 
 Attention à bien achever la *configuration* de certains modules comme APC pour la production.
@@ -57,7 +58,7 @@ Configuration de PHP (cli et apache2) :
 
 ```
 #/etc/php5/apache2/php.ini et /etc/php5/cli/php.ini
-date.timezone = Europe/Paris
+date.timezone=Europe/Paris
 
 [Phar]
 phar.readonly = Off
