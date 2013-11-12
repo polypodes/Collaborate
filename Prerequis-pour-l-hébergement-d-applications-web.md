@@ -38,7 +38,7 @@ Configuration du serveur
 ------------------------
 
 ```
-    server datetime = “Europe/Paris”
+server datetime = “Europe/Paris”
 ```
 
 Extensions de PHP :
@@ -56,20 +56,22 @@ Par ailleurs la configuration de PHP doit se conformer aux pré-requis du framew
 Configuration de PHP (cli et apache2) :
 
 ```
-    #/etc/php5/apache2/php.ini et /etc/php5/cli/php.ini
-    date.timezone = Europe/Paris
+#/etc/php5/apache2/php.ini et /etc/php5/cli/php.ini
+date.timezone = Europe/Paris
 
-    [Phar]
-    phar.readonly = Off
-    phar.require_hash = Off
-    detect_unicode = Off
+[Phar]
+phar.readonly = Off
+phar.require_hash = Off
+detect_unicode = Off
 ```
 
 
 Logiciels en ligne de commande utiles aux développeurs
 ------------------------------------------------------
 
-    imagemagick rsync git vim curl tree lynx ack-grep pandoc most exuberant-ctags linux-headers-generic build-essential manpages-fr manpages-fr-extra manpages-dev nodejs npm
+```
+imagemagick rsync git vim curl tree lynx ack-grep pandoc most exuberant-ctags linux-headers-generic build-essential manpages-fr manpages-fr-extra manpages-dev nodejs npm
+```
 
 Pour nodejs, utiliser le dépot PPA `ppa:chris-lea/node.js`. NodeJs n'est pas utilisé ici en tant que serveur web mais en tant qu'utilitaire CLI uniquement.
 
@@ -85,7 +87,11 @@ Apache2 mods à activer
 ----------------------
 
 ```
-    rewrite headers deflate expires setenvif
+rewrite
+headers
+deflate
+expires
+setenvif
 ```
 
 
