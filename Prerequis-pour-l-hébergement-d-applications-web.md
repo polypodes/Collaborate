@@ -15,7 +15,18 @@ Pour l’hébergement de sites web ou d’’applications web basées sur le fra
 l'agence Les Polypodes propose un document non exhaustif de prérequis techniques,
 à l’intention de l’Hébergeur retenu par le Client.
 
-Rôles et vocabulaire : 
+But
+---
+
+Le but de ce document est de donner les éléments minimaux pour l'hébergement d'applications PHP basés sur
+
+* Symfony 2.*
+* Silex 1.*
+* Drupal 7 et 8
+
+
+Rôles et vocabulaire 
+--------------------
 
 * L'Agence Les Polypodes est l’agence qui conçoit l’application web,
 * l’Hébergeur est responsable de l’hébergement et de l’infogérance éventuelle de l’application livrée,
@@ -37,11 +48,24 @@ Rôles et vocabulaire :
 Configuration du serveur
 ------------------------
 
+PHP (apache2 et cli)
+
 ```
+#/etc/php5/apache2/php.ini et /etc/php5/cli/php.ini
+
 server datetime = “Europe/Paris”
+
+error_reporting = E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_STRICT
+
+date.timezone=Europe/Paris
+
+[Phar]
+phar.readonly = Off
+phar.require_hash = Off
+detect_unicode = Off
 ```
 
-Extensions de PHP :
+Extensions de PHP à installer :
 
 ```
 php-apc php5-mysql php5-cli php5-curl php-pear php5-gd php5-imagick php5-imap php5-xsl php5-common php5-mcrypt php5-ps php5-pspell php5-recode php5-snmp php5-tidy php5-intl
@@ -54,21 +78,20 @@ Par ailleurs la configuration de PHP doit se conformer aux pré-requis du framew
 
 “Some systems don't support chmod +a, but do support another utility calledsetfacl. You may need to enable ACL support on your partition and install setfacl before using it (as is the case with Ubuntu)”
 
-Configuration de PHP (cli et apache2) :
+MySQL
+-----
 
-```
-#/etc/php5/apache2/php.ini et /etc/php5/cli/php.ini
-date.timezone=Europe/Paris
+L'Hébergeur est responsable de la backup des bases de données et de la bonne configuration des ressources allouées à MySQl.
 
-[Phar]
-phar.readonly = Off
-phar.require_hash = Off
-detect_unicode = Off
-```
+* Création d'une base de preproduction et d'une base de production
+* Mise en place d'un utilisateur MySQL auquel on permettra les actions suivantes :
 
+SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, INDEX, ALTER, CREATE TEMPORARY TABLES, LOCK TABLES
 
 Logiciels en ligne de commande utiles aux développeurs
 ------------------------------------------------------
+
+Logiciels à installer :
 
 ```
 imagemagick rsync git vim curl tree lynx ack-grep pandoc most exuberant-ctags linux-headers-generic build-essential manpages-fr manpages-fr-extra manpages-dev nodejs npm
@@ -80,12 +103,18 @@ Pour nodejs, utiliser le dépot PPA `ppa:chris-lea/node.js`. NodeJs n'est pas ut
 Logiciels web utiles aux développeurs
 -------------------------------------
 
+Applications à installer :
+
 * phpmyadmin: Merci de protéger l'accès à PhpMyAdmin (choix du mode de protection de l’accès à PhpMyAdmin laissé au jugement de l’Hébergeur)
 * WKHTML2PDF version 0.11 RC ou supérieure à installer : http://code.google.com/p/wkhtmltopdf/downloads/list. Les prérequis sont listés ici : http://code.google.com/p/wkhtmltopdf/wiki/compilation
 
 
-Apache2 mods à activer
-----------------------
+Apache2 
+-------
+
+Créer un vhost par environnement (preprod et prod), avec la directive `AllowOverride All`
+
+Mods d'Apache à activer :
 
 ```
 rewrite
@@ -94,6 +123,7 @@ deflate
 expires
 setenvif
 ```
+
 
 
 2. Limites, conseil et assistance
