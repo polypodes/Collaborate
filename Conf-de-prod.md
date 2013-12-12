@@ -5,14 +5,20 @@ nous aurions besoin de connaître les modules et la configuration détaillée du
 
 A cette fin, et n'ayant pas accès à SSH, pourriez-vous svp nous indiquer le résultat des commandes shell suivantes sur le serveur de production
 
+```bash
    $ apache2ctl -M
    $ apache2ctl -V
    $ php -m
    $ php -i
+   $ crontab -l
    $ mysql
-   > SHOW VARIABLES;
+```
 
-Ceci pour lister les modules d'Apache2 et de PHP installés, et la configuration détaillée d'Apache2, de PHP et de MySQL
+```bash
+   > SHOW VARIABLES;
+```
+
+Ceci pour lister les modules d'Apache2 et de PHP installés, et la configuration détaillée d'Apache2, de PHP et de MySQL, ainsi que les cronjobs liés site web (ceux de l'utilisateur www-data ?).
 
 Cordialement,
 ...
