@@ -14,8 +14,9 @@ A cette fin, et n'ayant pas accès à SSH, pourriez-vous svp nous indiquer le r�
    $ mysql
 ```
 
-```bash
+```mysql
    > SHOW VARIABLES;
+   > exit
 ```
 
 Ceci pour lister les modules d'Apache2 et de PHP installés, et la configuration détaillée d'Apache2, de PHP et de MySQL, ainsi que les cronjobs liés site web (ceux de l'utilisateur www-data ?).
