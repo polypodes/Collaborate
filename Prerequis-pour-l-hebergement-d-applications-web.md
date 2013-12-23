@@ -30,7 +30,7 @@ Le but de ce document est de donner les éléments minimaux pour l'hébergement 
 * Dual Core *minimum* + 8 Giga RAM *minimum*
 * architecture 64 bits
 * un accès FTP
-* un accès SSH, idéalement `sudoer` (pas obligatoire), pour  utilisateur linux `polypodes` avec des droits suffisant pour recharger la configuration d'Apache2 (`reload`) et éditer une crontab ; ajouter si possible cet utilisateur au `usergroup` utilisé par Apache2 (`:www-data`)
+* un accès SSH, idéalement `sudoer` (pas obligatoire), pour un utilisateur linux `polypodes` avec des droits suffisant pour recharger la configuration d'Apache2 (`reload`) et éditer une crontab ; ajouter si possible cet utilisateur au `usergroup` utilisé par Apache2 (`:www-data`)
 * une stack LAMP tel que décrite ci-dessous
 
 ## 5. PHP
@@ -72,7 +72,9 @@ L'Hébergeur est responsable de la backup des bases de données et de la bonne c
 * Création d'une base de preproduction et d'une base de production
 * Mise en place d'un utilisateur MySQL auquel on permettra les actions suivantes :
 
+```SQL
 SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, INDEX, ALTER, CREATE TEMPORARY TABLES, LOCK TABLES
+```
 
 ## 7. Apache2 
 
