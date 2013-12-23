@@ -1,7 +1,7 @@
 Prérequis pour l’hébergement et de déploiement de Drupal 
 ===============================================
 
-Éléments non exhaustifs,  configuration définitive laissée à l’appréciation de l’Hébergeur
+Éléments non exhaustifs ; configuration définitive laissée à l’appréciation de l’Hébergeur
 
 * version : 1.0
 * auteurs : Ronan Guilloux, Les Polypodes SARL (Nantes, France)
