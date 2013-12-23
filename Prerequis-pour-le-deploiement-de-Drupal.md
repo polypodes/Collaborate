@@ -2,7 +2,7 @@
 
 Éléments non exhaustifs ; configuration définitive laissée à l’appréciation de l’Hébergeur
 
-* version : 1.0
+* version : 1.1
 * auteurs : [Ronan Guilloux](mailto:ronan@lespolypodes.com), Les Polypodes SARL (Nantes, France)
 * licence : [CC by-sa 3.0](http://creativecommons.org/licenses/by-sa/3.0/fr/)
 * [Ce document libre et ouvert est téléchargeable en ligne](https://github.com/polypodes/Collaborate/blob/master/Prerequis-pour-le-deploiement-de-Drupal.md)
@@ -81,7 +81,19 @@ Applications à installer :
 * *phpmyadmin* : L'Hébergeur est responsable de la bonne protection de l'accès à PhpMyAdmin (choix du mode de protection de l’accès à PhpMyAdmin laissé au jugement de l’Hébergeur)
 
 
-## 8. Limites, conseil et assistance
+## 8. Livrables
+
+Livrables obligatoires attendues par l'Agence :
+
+* Accès FTP, SSH, URL de Phpmyadmin, et leurs différents identifiants d'accès
+* URL de pré-production
+* URL de production
+
+Livrable optionnels :
+
+Configuration Puppet de l'environnement de production, qui sera utilisée par l'équipe de développement avec `vagrant`.
+
+## 9. Limites, conseil et assistance
 
 En-dehors des points indiqués comme optionnels, tous ces points sont importants et peuvent devenir bloquants pour le succès du déploiement de l’application web basée sur le CMS Drupal 7.x. Sur ces points, l'Agence Les Polypodes demande a être prévenue dès qu'une incompréhension ou un doute survient du côté du Client ou de l'Hébergeur qui doit livrer l’hébergement et éventuellement assurer l’infogérance de l’application, et se tient prête à expliquer le détail et la raison de chaque pré-requis. 
 
