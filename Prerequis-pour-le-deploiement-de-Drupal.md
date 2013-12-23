@@ -3,7 +3,7 @@
 Éléments non exhaustifs ; configuration définitive laissée à l’appréciation de l’Hébergeur
 
 * version : 1.0
-* auteurs : <Ronan Guilloux> ronan@lespolypodes.com, Les Polypodes SARL (Nantes, France)
+* auteurs : [Ronan Guilloux](mailto:ronan@lespolypodes.com), Les Polypodes SARL (Nantes, France)
 * licence : [CC by-sa 3.0](http://creativecommons.org/licenses/by-sa/3.0/fr/) 
 
 
