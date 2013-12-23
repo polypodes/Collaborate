@@ -57,36 +57,42 @@ date.timezone=Europe/Paris
 
 Attention à bien achever la *configuration* de certains modules comme APC pour la production, si ces modules ont été installés.
 
-MySQL
------
+5. MySQL
+-------
 
 L'Hébergeur est responsable de la backup des bases de données et de la bonne configuration des ressources allouées à MySQL.
 
 Prévoir la création et la bonne configuration des droits pour un utilisateur MySQL dédié à Drupal
 
-Logiciels en ligne de commande utiles aux développeurs
-------------------------------------------------------
+6. Apache2 
+-------
+
+Créer un vhost par environnement (production), en permettant la ré-écriture d'URL (`mode_rewrite`) et en incluant la directive `AllowOverride All`.
+
+7. Logiciels utiles au bon déploiement
+--------------------------------------
 
 Dans le cadre d'un accès SSH, logiciels à installer :
 
+Obligatoire si accès SSH :
+
 ```
-imagemagick rsync git tig vim curl tree lynx ack-grep most exuberant-ctags manpages-fr manpages-fr-extra manpages-dev
+git vim curl
 ```
 
-Logiciels web utiles aux développeurs
--------------------------------------
+Optionnels (utiles pour le bon déploiement)
+
+```
+imagemagick rsync tig tree lynx ack-grep most exuberant-ctags manpages-fr manpages-fr-extra manpages-dev
+```
 
 Applications à installer :
 
 * `phpmyadmin` : L'Hébergeur est responsable de la bonne protection de l'accès à PhpMyAdmin (choix du mode de protection de l’accès à PhpMyAdmin laissé au jugement de l’Hébergeur)
 
-Apache2 
--------
-
-Créer un vhost par environnement (production), en permettant la ré-écriture d'URL (`mode_rewrite`) et en incluant la directive `AllowOverride All`.
 
 
-2. Limites, conseil et assistance
+8. Limites, conseil et assistance
 ---------------------------------
 
 En-dehors des points indiqués comme optionnels, tous ces points sont importants et peuvent devenir bloquants pour le succès du déploiement de l’application web basée sur le CMS Drupal 7.x. Sur ces points, l'Agence Les Polypodes demande a être prévenue dès qu'une incompréhension ou un doute survient du côté de l'Hébergeur qui doit livrer l’hébergement et éventuellement assurer l’infogérance de l’application, et se tient prête à expliquer le détail et la raison de chaque pré-requis. 
