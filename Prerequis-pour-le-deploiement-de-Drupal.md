@@ -8,19 +8,19 @@ Prérequis pour l’hébergement et de déploiement de Drupal
 * licence : http://creativecommons.org/licenses/by-sa/3.0/fr/ 
 
 
-But
----
+1. But
+-----
 
 Pour l’hébergement de sites web ou d’’applications web basées sur le CMS Drupal version 7.x, l'agence Les Polypodes propose un document non exhaustif de pré-requis techniques, à l’intention de l’Hébergeur retenu par le Client.
 
-Rôles et vocabulaire 
---------------------
+2. Rôles et vocabulaire 
+-----------------------
 
 * L'Agence Les Polypodes est l’agence qui conçoit l’application web,
 * l’Hébergeur est responsable de l’hébergement et de l’infogérance éventuelle de l’application livrée,
 * le Client final est l'entité qui réalise la commande et la recette l’application et son hébergement.
 
-1. Prérequis généraux minimaux : 
+3. Prérequis généraux liés à l'OS : 
 --------------------------------
 
 * OS Linux, dernière version stable (LTS optionnel, pas formellement demandée). Préférence de l'équipe pour Debian ou Ubuntu, nous laissons l’Hébergeur juger de la meilleure distribution à utiliser.
@@ -31,30 +31,38 @@ Rôles et vocabulaire
 * un accès SSH, idéalement `sudoer` (pas obligatoire)
 * une stack LAMP décrite ci-dessous
 
-Configuration du serveur
-------------------------
+4. Configuration générale du serveur
+---------------------------
 
-PHP (apache2 et cli)
+La date et l'heure du serveur doivent être configurées sur le fuseau “Europe/Paris”
+
+Version et configuration d'Apache2, PHP et MySQL : La configuration de PHP doit se conformer en tout point aux pré-requis du CMS Drupal version 7.x, dernière version stable de la version 7, y compris tous les pré-requis optionnels. Pour cela, se conformer strictement aux prérequis listés dans ces pages, en retenant les solutions Apache2, PHP et MySQL, en suivant les indications des URL suivantes :
+
+* https://drupal.org/requirements
+* https://drupal.org/requirements/webserver
+* https://drupal.org/requirements/php
+* https://drupal.org/requirements/database
+* https://drupal.org/requirements/pdo
+
+Configuration complémentaire de PHP :
+PHP (pour apache2 et pour cli)
 
 ```
 #/etc/php5/apache2/php.ini et /etc/php5/cli/php.ini
-
-server datetime = “Europe/Paris”
-
+(...)
 error_reporting = E_ALL
-
+(...)
 date.timezone=Europe/Paris
+```
 
-Attention à bien achever la *configuration* de certains modules comme APC pour la production, si ces modules ont été installé.
-
-La configuration de PHP doit se conformer aux pré-requis du CMS Drupal version 7.x, dernière version stable de la version 7, y compris tous les pré-requis optionnels.
+Attention à bien achever la *configuration* de certains modules comme APC pour la production, si ces modules ont été installés.
 
 MySQL
 -----
 
 L'Hébergeur est responsable de la backup des bases de données et de la bonne configuration des ressources allouées à MySQL.
 
-* Création et configuration des droits pour un utilisateur MySQL dédié à Drupal
+Prévoir la création et la bonne configuration des droits pour un utilisateur MySQL dédié à Drupal
 
 Logiciels en ligne de commande utiles aux développeurs
 ------------------------------------------------------
@@ -62,7 +70,7 @@ Logiciels en ligne de commande utiles aux développeurs
 Dans le cadre d'un accès SSH, logiciels à installer :
 
 ```
-imagemagick rsync git vim curl tree lynx ack-grep most exuberant-ctags manpages-fr manpages-fr-extra manpages-dev
+imagemagick rsync git tig vim curl tree lynx ack-grep most exuberant-ctags manpages-fr manpages-fr-extra manpages-dev
 ```
 
 Logiciels web utiles aux développeurs
@@ -70,14 +78,12 @@ Logiciels web utiles aux développeurs
 
 Applications à installer :
 
-* phpmyadmin: Merci de protéger l'accès à PhpMyAdmin (choix du mode de protection de l’accès à PhpMyAdmin laissé au jugement de l’Hébergeur)
+* `phpmyadmin` : L'Hébergeur est responsable de la bonne protection de l'accès à PhpMyAdmin (choix du mode de protection de l’accès à PhpMyAdmin laissé au jugement de l’Hébergeur)
 
 Apache2 
 -------
 
-Créer un vhost par environnement (preprod et prod), avec la directive `AllowOverride All`
-
-
+Créer un vhost par environnement (production), en permettant la ré-écriture d'URL (`mode_rewrite`) et en incluant la directive `AllowOverride All`.
 
 
 2. Limites, conseil et assistance
