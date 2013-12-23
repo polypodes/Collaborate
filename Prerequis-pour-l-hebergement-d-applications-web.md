@@ -9,7 +9,7 @@
 
 ## 1. Contexte
 
-Pour l’hébergement de sites web ou d’’applications web basées sur le framework Symfony2,
+Pour l’hébergement de sites web ou d’’applications web basées sur le stack LAMP,
 l'agence Les Polypodes propose un document non exhaustif de prérequis techniques,
 à l’intention de l’Hébergeur retenu par le Client.
 
