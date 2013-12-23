@@ -24,7 +24,7 @@ Pour l’hébergement de sites web ou d’’applications web basées sur le CMS
 --------------------------------
 
 * OS Linux, dernière version stable (LTS optionnel, pas formellement demandée). Préférence de l'équipe pour Debian ou Ubuntu, nous laissons l’Hébergeur juger de la meilleure distribution à utiliser.
-* 1 Core + 8 Giga RAM *minimum*
+* Dual Core *minimum* + 8 Giga RAM *minimum*
 * architecture 64 bits
 * 1 utilisateur linux "polypodes" avec des droits nécessaires pour reloader Apache2 et éditer une crontab ; ajouter si possible cet utilisateur au usergroup utilisé par Apache2 (:www-data)
 * un accès FTP
