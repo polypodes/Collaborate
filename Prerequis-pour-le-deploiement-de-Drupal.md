@@ -43,8 +43,7 @@ Version et configuration d'Apache2, PHP et MySQL : La configuration de PHP doit 
 * https://drupal.org/requirements/database
 * https://drupal.org/requirements/pdo
 
-Configuration complémentaire de PHP :
-PHP (pour apache2 et pour cli)
+Configuration complémentaire de PHP : (pour apache2 et pour cli)
 
 ```
 #/etc/php5/apache2/php.ini et /etc/php5/cli/php.ini
