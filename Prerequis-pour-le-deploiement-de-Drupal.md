@@ -18,7 +18,7 @@ Pour l’hébergement de sites web ou d’’applications web basées sur le CMS
 
 * L'Agence Les Polypodes est l’agence qui conçoit l’application web,
 * l’Hébergeur est responsable de l’hébergement et de l’infogérance éventuelle de l’application livrée,
-* le Client final est l'entité qui réalise la commande et la recette l’application et son hébergement.
+* le Client final est l'entité qui réalise la commande et la recette de l’application et de son hébergement.
 
 3. Prérequis généraux liés à l'OS : 
 --------------------------------
