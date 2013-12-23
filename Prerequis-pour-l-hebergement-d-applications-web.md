@@ -4,9 +4,9 @@ Prérequis pour l’hébergement d’applications web
 Éléments non exhaustifs, configuration définitive laissée à l’appréciation de l’Hébergeur
 
 * version : 1.0
-* auteurs : Ronan Guilloux, Les Polypodes SARL (Nantes, France)
+* auteurs : [Ronan Guilloux](mailto:ronan@lespolypodes.com), Les Polypodes SARL (Nantes, France)
 * licence : http://creativecommons.org/licenses/by-sa/3.0/fr/ 
-
+* [Ce document libre et ouvert est téléchargeable en ligne](https://github.com/polypodes/Collaborate/blob/master/Prerequis-pour-l-hebergement-d-applications-web.md)
 
 Contexte
 --------
