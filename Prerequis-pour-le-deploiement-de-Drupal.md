@@ -35,7 +35,7 @@ Pour l’hébergement de sites web ou d’’applications web basées sur le CMS
 
 La date et l'heure du serveur doivent être configurées sur le fuseau “Europe/Paris”
 
-Version et configuration d'Apache2, PHP et MySQL : La configuration de PHP doit se conformer en tout point aux pré-requis du CMS Drupal version 7.x, dernière version stable de la version 7, y compris tous les pré-requis optionnels. Pour cela, se conformer strictement aux prérequis listés dans ces pages, en retenant les solutions Apache2, PHP et MySQL, en suivant les indications des URL suivantes :
+Version et configuration d'Apache2, PHP et MySQL : La configuration de PHP doit se conformer en tout point aux pré-requis du CMS Drupal version 7.x, dernière version stable de la version 7, y compris tous les pré-requis optionnels. Pour cela, suivre les indications des URL suivantes, en retenant les solutions Linux, Apache2, PHP et MySQL :
 
 * https://drupal.org/requirements
 * https://drupal.org/requirements/webserver
