@@ -86,7 +86,6 @@ Applications à installer :
 Livrables obligatoires attendues par l'Agence :
 
 * Accès FTP, SSH, URL de Phpmyadmin, et leurs différents identifiants d'accès
-* URL de pré-production
 * URL de production
 
 Livrable optionnels :
