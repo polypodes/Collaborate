@@ -45,8 +45,6 @@ Configuration complémentaire de PHP : (pour *apache2* et pour *cli*)
 ```
 #/etc/php5/apache2/php.ini et /etc/php5/cli/php.ini
 (...)
-error_reporting = E_ALL
-(...)
 date.timezone=Europe/Paris
 ```
 
