@@ -26,10 +26,9 @@ Pour l’hébergement de sites web ou d’’applications web basées sur le CMS
 * OS Linux, dernière version stable (LTS optionnel, pas formellement demandée). Préférence de l'équipe pour Debian ou Ubuntu, nous laissons l’Hébergeur juger de la meilleure distribution à utiliser.
 * Dual Core *minimum* + 8 Giga RAM *minimum*
 * architecture 64 bits
-* 1 utilisateur linux "polypodes" avec des droits nécessaires pour reloader Apache2 et éditer une crontab ; ajouter si possible cet utilisateur au usergroup utilisé par Apache2 (:www-data)
 * un accès FTP
-* un accès SSH, idéalement `sudoer` (pas obligatoire)
-* une stack LAMP décrite ci-dessous
+* un accès SSH, idéalement `sudoer` (pas obligatoire), pour  utilisateur linux `polypodes` avec des droits suffisant pour recharger la configuration d'Apache2 (`reload`) et éditer une crontab ; ajouter si possible cet utilisateur au `usergroup` utilisé par Apache2 (`:www-data`)
+* une stack LAMP tel que décrite ci-dessous
 
 4. Configuration générale du serveur
 ---------------------------
@@ -91,9 +90,10 @@ Applications à installer :
 * `phpmyadmin` : L'Hébergeur est responsable de la bonne protection de l'accès à PhpMyAdmin (choix du mode de protection de l’accès à PhpMyAdmin laissé au jugement de l’Hébergeur)
 
 
-
 8. Limites, conseil et assistance
 ---------------------------------
+
+L'Agence Les Polypodes demande au Client ou à l'Hébergeur d'être prévenue de tout point de blocage dans les pré-requis ci-dessus.
 
 En-dehors des points indiqués comme optionnels, tous ces points sont importants et peuvent devenir bloquants pour le succès du déploiement de l’application web basée sur le CMS Drupal 7.x. Sur ces points, l'Agence Les Polypodes demande a être prévenue dès qu'une incompréhension ou un doute survient du côté de l'Hébergeur qui doit livrer l’hébergement et éventuellement assurer l’infogérance de l’application, et se tient prête à expliquer le détail et la raison de chaque pré-requis. 
 
