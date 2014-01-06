@@ -15,7 +15,7 @@ Pour l’hébergement de sites web ou d’’applications web basées sur le CMS
 
 ## 2. Rôles et vocabulaire 
 
-* L'Agence Les Polypodes est l’agence qui conçoit l’application web,
+* L'Agence Les Polypodes est l’agence qui conçoit l’application web, et qui le cas échéant la déploie et la maintient,
 * l’Hébergeur est responsable de l’hébergement et de l’infogérance éventuelle de l’application livrée,
 * le Client final est l'entité qui réalise la commande et la recette de l’application et de son hébergement.
 
