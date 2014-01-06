@@ -28,6 +28,8 @@ Pour l’hébergement de sites web ou d’’applications web basées sur le CMS
 * un accès SSH, idéalement `sudoer` (pas obligatoire), pour  utilisateur linux `polypodes` avec des droits suffisant pour recharger la configuration d'Apache2 (`reload`) et éditer une crontab ; ajouter si possible cet utilisateur au `usergroup` utilisé par Apache2 (`:www-data`)
 * une stack LAMP tel que décrite ci-dessous
 
+L'accès SSH permet notamment le bon déploiement, via GIT ou rsync, des mises à jours et évolutions du site, et est rendu obligatoire par l'utilisation en ligne de commande de l'outil [Drush](https://github.com/drush-ops/drush), proposé par Drupal.
+
 ## 4. Configuration générale du serveur
 
 La date et l'heure du serveur doivent être configurées sur le fuseau “Europe/Paris”
