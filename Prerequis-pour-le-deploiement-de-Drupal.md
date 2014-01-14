@@ -10,7 +10,6 @@
 
 ## 1. But
 
-
 Pour l’hébergement de sites web ou d’’applications web basées sur le CMS Drupal version 7.x, l'agence Les Polypodes propose un document non exhaustif de pré-requis techniques, à l’intention de l’Hébergeur retenu par le Client.
 
 ## 2. Rôles et vocabulaire 
@@ -26,7 +25,10 @@ Pour l’hébergement de sites web ou d’’applications web basées sur le CMS
 * architecture 64 bits
 * un accès FTP
 * un accès SSH, idéalement `sudoer` (pas obligatoire), pour  utilisateur linux `polypodes` avec des droits suffisant pour recharger la configuration d'Apache2 (`reload`) et éditer une crontab ; ajouter si possible cet utilisateur au `usergroup` utilisé par Apache2 (`:www-data`)
-* 
+
+* une stack LAMP tel que décrite ci-dessous
+
+L'accès SSH permet notamment le bon déploiement, via GIT ou rsync, des mises à jours et évolutions du site, et est rendu obligatoire par l'utilisation en ligne de commande de l'outil [Drush](https://github.com/drush-ops/drush), proposé par Drupal.
 
 Tests :
 
@@ -37,11 +39,6 @@ root@server:/# cat /etc/debian_version
 root@server:/# uname -a
 root@server:~# free -m
 ```
-
-
-* une stack LAMP tel que décrite ci-dessous
-
-L'accès SSH permet notamment le bon déploiement, via GIT ou rsync, des mises à jours et évolutions du site, et est rendu obligatoire par l'utilisation en ligne de commande de l'outil [Drush](https://github.com/drush-ops/drush), proposé par Drupal.
 
 ## 4. Configuration générale du serveur
 
@@ -66,7 +63,7 @@ root@server:~# php -i
 
 Configuration complémentaire de PHP : (pour *apache2* et pour *cli*)
 
-Tests pour `apache2` :
+Exemple de tests pour `apache2` :
 
 ```bash
 root@server:/# cat /etc/php5/apache2/php.ini | grep 'session.cache_limiter'
@@ -74,7 +71,7 @@ root@server:/# cat /etc/php5/apache2/php.ini | grep 'session.auto_start'
 root@server:/# cat /etc/php5/apache2/php.ini | grep 'magic_quotes_gpc'
 root@server:/# cat /etc/php5/apache2/php.ini | grep 'register_globals'
 root@server:/# cat /etc/php5/apache2/php.ini | grep 'memory_limit'
-root@server:/# php -i| grep 'xml'
+root@server:/# php -i | grep 'xml'
 root@server:/# ll /etc/php5/conf.d/ | grep 'gd'
 root@server:/# php -i | grep 'json'
 root@server:/# php -i | grep 'hash'
@@ -153,7 +150,11 @@ Configuration Puppet de l'environnement de production, qui sera utilisée par l'
 
 ## 9. Limites, conseil et assistance
 
+Les points ci-dessus sont soit un rappel des pré-requis serveur de Drupal, soit des éléméents permettant le bon déploiement des livrables de l'Agence. L'Hébergeur/l'infogéreur reste le seul interlocuteur du Client pour la mise en place effective de ces pré-requis. Dans le cas ou cela a été prévu, l'Agence peut jouer un rôle d'Assistance à Maitrise d'Ouvrage auprès du client pour l'aider à valider que ces pré-requis ont bien été installés.
+
 En-dehors des points indiqués comme optionnels, tous ces points sont importants et peuvent devenir bloquants pour le succès du déploiement de l’application web basée sur le CMS Drupal 7.x. Sur ces points, l'Agence Les Polypodes demande a être prévenue dès qu'une incompréhension ou un doute survient du côté du Client ou de l'Hébergeur qui doit livrer l’hébergement et éventuellement assurer l’infogérance de l’application, et se tient prête à expliquer le détail et la raison de chaque pré-requis. 
+
+Il revient à l'Hébergeur de réaliser l'installation et la configuration des pré-requis de Drupal, et de s'assurer que ces pré-requis de Drupal ne mettent pas en cause l'intégrité, la disponibilité et la performances de l'infrastrucutre existante (en cas de ré-utilisation d'un serveur de production en particulier). 
 
 Il revient au Client Final de créer les conditions et les occasions de dialogues entre l’hébergeur et l'Agence pour la bonne conduite et le succès du projet. 
 
