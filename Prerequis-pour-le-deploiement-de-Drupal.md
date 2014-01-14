@@ -2,7 +2,7 @@
 
 Éléments non exhaustifs ; configuration définitive laissée à l’appréciation de l’Hébergeur
 
-* version : 1.1
+* version : 1.2
 * auteurs : [Ronan Guilloux](mailto:ronan@lespolypodes.com), Les Polypodes SARL (Nantes, France)
 * licence : [CC by-sa 3.0](http://creativecommons.org/licenses/by-sa/3.0/fr/)
 * [Ce document libre et ouvert est téléchargeable en ligne](https://github.com/polypodes/Collaborate/blob/master/Prerequis-pour-le-deploiement-de-Drupal.md)
@@ -26,6 +26,19 @@ Pour l’hébergement de sites web ou d’’applications web basées sur le CMS
 * architecture 64 bits
 * un accès FTP
 * un accès SSH, idéalement `sudoer` (pas obligatoire), pour  utilisateur linux `polypodes` avec des droits suffisant pour recharger la configuration d'Apache2 (`reload`) et éditer une crontab ; ajouter si possible cet utilisateur au `usergroup` utilisé par Apache2 (`:www-data`)
+* 
+
+Tests :
+
+```bash
+ssh root@server
+root@server:/# cat /etc/issue
+root@server:/# cat /etc/debian_version
+root@server:/# uname -a
+root@server:~# free -m
+```
+
+
 * une stack LAMP tel que décrite ci-dessous
 
 L'accès SSH permet notamment le bon déploiement, via GIT ou rsync, des mises à jours et évolutions du site, et est rendu obligatoire par l'utilisation en ligne de commande de l'outil [Drush](https://github.com/drush-ops/drush), proposé par Drupal.
@@ -41,13 +54,34 @@ Version et configuration d'Apache2, PHP et MySQL : La configuration de PHP doit 
 * [https://drupal.org/requirements/php](https://drupal.org/requirements/php)
 * [https://drupal.org/requirements/database](https://drupal.org/requirements/database)
 * [https://drupal.org/requirements/pdo](https://drupal.org/requirements/pdo)
+* 
+Tests :
+
+```bash
+ssh root@server
+root@server:/# date
+root@server:~# php -v
+root@server:~# php -i
+```
 
 Configuration complémentaire de PHP : (pour *apache2* et pour *cli*)
 
-```
-#/etc/php5/apache2/php.ini et /etc/php5/cli/php.ini
-(...)
-date.timezone=Europe/Paris
+Tests pour `apache2` :
+
+```bash
+root@server:/# cat /etc/php5/apache2/php.ini | grep 'session.cache_limiter'
+root@server:/# cat /etc/php5/apache2/php.ini | grep 'session.auto_start'
+root@server:/# cat /etc/php5/apache2/php.ini | grep 'magic_quotes_gpc'
+root@server:/# cat /etc/php5/apache2/php.ini | grep 'register_globals'
+root@server:/# cat /etc/php5/apache2/php.ini | grep 'memory_limit'
+root@server:/# php -i| grep 'xml'
+root@server:/# ll /etc/php5/conf.d/ | grep 'gd'
+root@server:/# php -i | grep 'json'
+root@server:/# php -i | grep 'hash'
+root@server:/# cat /etc/php5/apache2/php.ini | grep 'expose_php'
+root@server:/# php -i | grep 'allow_url_fopen'
+root@server:/# cat /etc/php5/apache2/php.ini | grep 'display_errors'
+root@server:/# cat /etc/php5/apache2/php.ini | grep 'date.timezone'
 ```
 
 Attention à bien achever la *configuration* de certains modules comme APC pour la production, si ces modules ont été installés.
@@ -56,11 +90,27 @@ Attention à bien achever la *configuration* de certains modules comme APC pour 
 
 L'Hébergeur est responsable de la backup des bases de données et de la bonne configuration des ressources allouées à MySQL.
 
+Tests :
+
+```bash
+root@server:/# mysql -V
+mysql  Ver 14.14 Distrib 5.1.49, for debian-linux-gnu (x86_64) using readline 6.1
+root@server:/# php -i | grep 'PDO'
+```
+
 Prévoir la création et la bonne configuration des droits pour un utilisateur MySQL dédié à Drupal
 
 ## 6. Apache2 
 
 Créer un vhost par environnement (production), en permettant la ré-écriture d'URL (`mode_rewrite`) et en incluant la directive `AllowOverride All`.
+
+Tests : 
+
+```bash
+root@server:/# apache2 -l
+root@server:/# apache2 -V
+root@server:/# ls -l /etc/apache2/mods-enabled
+```
 
 ## 7. Logiciels utiles au bon déploiement
 
@@ -82,6 +132,13 @@ Applications à installer :
 
 * *phpmyadmin* : L'Hébergeur est responsable de la bonne protection de l'accès à PhpMyAdmin (choix du mode de protection de l’accès à PhpMyAdmin laissé au jugement de l’Hébergeur)
 
+Tests : 
+
+Pour chacun des logiciels listés dans cette section : 
+
+```bash
+root@server:/# whereis [nom_du_logiciel]
+```
 
 ## 8. Livrables
 
