@@ -14,21 +14,22 @@ Licence : http://creativecommons.org/licenses/by-sa/3.0/fr/
 
 Pour l'intégration HTML d'un nouveau site, LES POLYPODES utilise des frameworks HTML et CSS qui accélèrent et encadrent le travail d'intégration et la pérennité du projet.
 
-Notre framework HTML / CSS est actuellement Twitter Bootstrap version 3, il se base sur plusieurs études précédentes (comme Html5boilerplate) et il constitue un projet communautaire robuste, fiable et qui est pour l'instant un standard de facto. 
+Notre framework HTML / CSS est actuellement Twitter Bootstrap version 3. C’est un projet communautaire robuste, fiable et qui est pour l'instant un standard de facto. 
 
 Rôles et vocabulaire : LES POLYPODES est l’agence qui reçoit le PSD, l’Agence Créative est l’agence qui crée et livre le PSD, le client final est celui qui recette l’intégration HTML.
 
 
 ## 1. Prérequis généraux :
 
-Voici la liste des pré-requis qui permettront à LES POLYPODES d’effectuer la recette et de valider la livraison d'un fichier PSD, en vue de son intégration en HTML5 / CSS 3 :
+Voici la liste des pré-requis qui permettront à LES POLYPODES d’effectuer la recette et de valider la livraison d'un fichier PSD (Fichier issu de Adobe Photoshop), en vue de son intégration en HTML / CSS :
 
-1. Le livrable est constitué d'un seul fichier PSD (Fichier issu de Adobe Photoshop);
+1. Le livrable est constitué d'un seul fichier PSD;
 2. Résolution : 72 dpi;
 3. Ce fichier contient un calque de grilles et la création graphique respecte ce système de grille (cf. ci-dessous);
 4. Fournir un PSD organisé et ré-utilisable (cf. ci-dessous);
-5. Utiliser systématiquement des fontes libres plutôt que des fontes propriétaires. Cf. celles de Google ( http://www.google.com/fonts ) ou autres fonts compatibles Creative Common 3.0, et non de fontes propriétaires;
-6. Utilisation systématique d'iconfonts (cf. http://icomoon.io/, entre autres);
+5. Utiliser préférablement des fontes libres plutôt que des fontes propriétaires. Cf. celles de [Google](http://www.google.com/fonts) ou autres fontes compatibles Creative Common 3.0;
+6. Si des fontes propriétaires sont un pré-requis de la charte graphique, vérifier la disponibilité de la polices de caractères sur [TypeKit](http://www.typekit.com) : 
+6. Les icônes fournies et présentes dans le fichier final seront vectorielles;
 7. Il revient au Client Final (celui qui effectue la recette de l’intégration HTML) de déterminer par avance et de communiquer le détail de ses objectifs de responsive design : smartphone et / ou iPad et / ou écran PC et / ou WebTV, etc., et de détailler la taille d’écran min/max de chaque type d’écran visé;
 8. Si oui, le Client Final accepte-t-il le principe de faire des rendu en CSS3, ce qui permet de réduire le nombre d'images ? Cela implique un rendu un peu moins bon sous IE8 qu'il ne le sera sous Chrome et Firefox. À titre d'information, sur une créa PSD classique, en général, plus de la moitié des images peuvent être faites en CSS3, réduisant d'autant la taille et le temps de chargement des pages.
 
@@ -39,9 +40,9 @@ Tailles d’écrans et responsive design : L’intégration HTML finale en respo
 
 La créa graphique doit se faire sur la base d'une grille d'une largeur de 1170px à priori, détaillée comme suit :
 
-1. 1200px large a priori (cf. variantes ci-dessous)
-2. C'est à dire 1170px de largeur utile + deux gouttières extérieures de 15px
-3. Les 1170px se composent de 12 ou 16 colonnes de 70px, séparées de gouttières intermédiaires de 30px
+1. Largeur totale de 1200px (cf. variantes ci-dessous)
+2. C'est à dire 1170px de largeur utile + deux gouttières extérieures de 15px;
+3. Les 1170px se composent de 12 colonnes de 95px, séparées de gouttières intermédiaires de 30px;
 4. Outils existants : un template de PSD ou cet autre template PSD équivalent (avec la version Ai en plus), compatible Bootstrap lui aussi.
 
 Variantes possibles : 1170px est la largeur utilisée par LES POLYPODES, 980px est une  autre largeur possible conseillée : d'autres largeurs de grilles sont possibles. Si le choix de largeur est différent de celui conseillé ici, LES POLYPODES devra d'abord en valider que cette autre largeur soit compatible avec les objectifs de responsive design (smartphone ? tablette ? PC ? TV ?) à définir par le client final, et avec le framework Twitter Bootstrap v3 utilisé par LES POLYPODES.
@@ -50,10 +51,10 @@ Variantes possibles : 1170px est la largeur utilisée par LES POLYPODES, 980px e
 
 ## 3. Organisation interne du PSD
 
-LES POLYPODES attend un seul fichier PSD organisé en dossiers et en calques, utilisable par l'intégrateur HTML 5. Cela implique les points suivants :
+LES POLYPODES attend un seul fichier PSD organisé en dossiers et en calques, utilisable par l'intégrateur HTML. Cela implique les points suivants :
 
 1. Organiser impérativement les calques en dossier : header / content / footer
-2.	Pour chaque élément (liens, boutons, mégamenu, etc.), lorsqu'il possède plusieurs états différents (ex : bouton enfoncé ou non) : fournir chaque état dans une structure de calques organisée : chaque état est proposé séparément.
+2.	Pour chaque élément (liens, boutons, mégamenu, etc.), lorsqu'il possède plusieurs états (ex : bouton enfoncé ou non) : fournir chaque état dans une structure de calques organisés : chaque état est proposé séparément.
 
 
 ## 4. Limites, conseil et assistance
