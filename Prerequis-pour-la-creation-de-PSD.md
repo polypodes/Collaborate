@@ -1,4 +1,3 @@
-
 # Prérequis pour la création de fichiers PSD en vue d’une intégration  HTML 5 / CSS 3 incluant des objectifs de responsive design.
 
 version 1.1
@@ -6,6 +5,7 @@ version 1.1
 Auteurs :
 
 * Samuel Frémondière (TOOG)
+* Gaëtan Ark (Les POLYPODES)
 * Ronan Guilloux (Les POLYPODES)
 
 Licence : http://creativecommons.org/licenses/by-sa/3.0/fr/ 
