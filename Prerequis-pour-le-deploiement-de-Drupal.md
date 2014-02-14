@@ -20,7 +20,8 @@ Pour l’hébergement de sites web ou d’’applications web basées sur le CMS
 
 ## 3. Prérequis généraux liés à l'OS : 
 
-* OS Linux, dernière version stable (LTS optionnel, pas formellement demandée). Préférence de l'équipe pour Debian ou Ubuntu, nous laissons l’Hébergeur juger de la meilleure distribution à utiliser.
+* OS Linux, dernière version stable (LTS optionnel, pas formellement demandée).
+* Distribution Debian ou Ubuntu - nous laissons l’Hébergeur juger de la meilleure distribution à utiliser et consulter les pré-requis de Drupal ci-dessous.
 * Dual Core *minimum* + 8 Giga RAM *minimum*
 * architecture 64 bits
 * un accès FTP
