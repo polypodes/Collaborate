@@ -24,6 +24,7 @@ Pour l’hébergement de sites web ou d’’applications web basées sur le CMS
 * Distribution Debian ou Ubuntu - nous laissons l’Hébergeur juger de la meilleure distribution à utiliser et consulter les pré-requis de Drupal ci-dessous.
 * Dual Core *minimum* + 8 Giga RAM *minimum*
 * architecture 64 bits
+* 10 Giga d'espace disque (backup non compris)
 * un accès FTP
 * un accès SSH, idéalement `sudoer` (pas obligatoire), pour  utilisateur linux `polypodes` avec des droits suffisant pour recharger la configuration d'Apache2 (`reload`) et éditer une crontab ; ajouter si possible cet utilisateur au `usergroup` utilisé par Apache2 (`:www-data`)
 
