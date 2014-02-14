@@ -48,10 +48,10 @@ Version et configuration d'Apache2, PHP et MySQL : La configuration de PHP doit 
 
 * [https://drupal.org/requirements](https://drupal.org/requirements)
 * [https://drupal.org/requirements/webserver](https://drupal.org/requirements/webserver)
-* [https://drupal.org/requirements/php](https://drupal.org/requirements/php)
+* [https://drupal.org/requirements/php](https://drupal.org/requirements/php) : PHP 5.4 ou supérieur
 * [https://drupal.org/requirements/database](https://drupal.org/requirements/database)
 * [https://drupal.org/requirements/pdo](https://drupal.org/requirements/pdo)
-* 
+
 Tests :
 
 ```bash
@@ -109,11 +109,19 @@ root@server:/# apache2 -V
 root@server:/# ls -l /etc/apache2/mods-enabled
 ```
 
+Mods d'Apache à activer :
+
+```
+rewrite
+headers
+deflate
+expires
+setenvif
+```
+
 ## 7. Logiciels utiles au bon déploiement
 
-Dans le cadre d'un accès SSH, logiciels à installer :
-
-Obligatoire si accès SSH :
+Obligatoire avec l'accès SSH :
 
 ```
 git vim curl
