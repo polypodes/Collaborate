@@ -1,6 +1,6 @@
 # Prérequis pour l’hébergement d’applications web
 
-Éléments non exhaustifs, configuration définitive laissée à l’appréciation de l’Hébergeur
+Ce document liste les pré-requis de l'Agence Les Polypodes pour réaliser un déploiement d'application Symfony2 sur un serveur web. Ce document reprend la documentation officielle de Symfony2 concernant les prérequis techniques, et détaille une configuration optimale pour l'industrialisation du déploiement. Ces éléments sont non exhaustifs : la configuration définitive est laissée à l’appréciation de l’Hébergeur qui maintient ce serveur et du Client qui reste le donneur d'ordre final.
 
 * version : 1.1
 * auteurs : [Ronan Guilloux](mailto:ronan@lespolypodes.com), Les Polypodes SARL (Nantes, France)
