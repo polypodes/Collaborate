@@ -42,7 +42,10 @@ PHP (apache2 et cli)
 Extensions de PHP à installer :
 
 ```
-php-apc php5-mysql php5-cli php5-curl php-pear php5-gd php5-imagick php5-imap php5-xsl php5-common php5-mcrypt php5-ps php5-pspell php5-recode php5-snmp php5-tidy php5-intl
+php-apc php5-mysql php5-cli php5-curl php-pear
+php5-gd php5-imagick php5-imap php5-xsl
+php5-common php5-mcrypt php5-ps php5-pspell
+php5-recode php5-snmp php5-tidy php5-intl
 ```
 
 Configuration complémentaire de PHP : (pour *apache2* et pour *cli*)
@@ -73,7 +76,8 @@ L'Hébergeur est responsable de la backup des bases de données et de la bonne c
 * Mise en place d'un utilisateur MySQL auquel on permettra les actions suivantes :
 
 ```SQL
-SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, INDEX, ALTER, CREATE TEMPORARY TABLES, LOCK TABLES
+SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, 
+INDEX, ALTER, CREATE TEMPORARY TABLES, LOCK TABLES
 ```
 
 ## 7. Apache2 
