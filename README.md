@@ -7,7 +7,7 @@ Divers documents libres, ouverts et collaboratifs, partagés avec nos partenaire
 ### A l'intention de votre Hébergeur / Infogéreur :
 
 * [Prérequis pour l’hébergement d’applications web](Prerequis-pour-l-hebergement-d-applications-web.md) modernes basées sur PHP (Symfony2, etc.)
-* [Prérequis pour l’hébergement et de déploiement de Drupal](Prerequis-pour-le-deploiement-de-Drupal.md)
+* [Prérequis pour l’hébergement et de déploiement de Drupal](Prerequis-pour-le-deploiement-de-Drupal.md) spécifiquement
 
 ### A l'intention de votre Directeur Artistique / Agence Créative :
 
