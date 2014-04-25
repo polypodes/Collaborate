@@ -15,8 +15,7 @@ Divers documents libres, ouverts et collaboratifs, partagés avec nos partenaire
  
 ### Autres documents
 
-* Modèle de courrier pour [valider un environnement de production](Conf-de-prod.md) déjà existant, dépourvu d'accès SSH, et devant accueillir une nouvelle application web.
-* 
+* Modèle de courrier pour [valider un environnement de production](Conf-de-prod.md) déjà existant, dépourvu d'accès SSH, et devant accueillir une nouvelle application web développée par nous.
 
 ### License
 
