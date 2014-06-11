@@ -245,7 +245,7 @@ Create a `/root/.my.cnf` file:
 ```
 [client]
 user=root
-pass=pFXumUunz4q7!
+pass=ThePassWord
 ```
 
 Give it appropriate permissions
