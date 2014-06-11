@@ -178,7 +178,7 @@ vim /etc/php5/apache2/php.ini /etc/php5/cli/php.ini -p
 date.timezone = Europe/Paris
 ```
 
-`.phar` tunable PHP archives need care:
+`.phar` PHP archives need special options:
 
 ```
 [Phar]
