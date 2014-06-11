@@ -12,7 +12,7 @@ This document describes a basic LAMP (GNU/Linux, Apache2, MySQL, PHP) + GIT serv
 - **version**: 0.9 - June 11th, 2014.
 - **licence** : http://creativecommons.org/licenses/by-sa/3.0/fr/
 - **author**: Ronan GUILLOUX (<ronan@lespolypodes.com>), [Les Polypodes](http://lespolyodes.com)
-- [This free/open document is available online here]()
+- [This free/open document is available online here](https://github.com/polypodes/Collaborate/blob/master/dev.server.installation.md)
 
 ## Remote access summary
 
