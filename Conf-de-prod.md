@@ -11,7 +11,7 @@ A cette fin, et n'ayant pas accès à SSH, pourriez-vous svp nous indiquer le r�
    $ php -m
    $ php -i
    $ crontab -l
-   $ mysql
+   $ mysql --version
 ```
 
 ```mysql
