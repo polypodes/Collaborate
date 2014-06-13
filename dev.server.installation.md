@@ -1,4 +1,4 @@
-# LAMP GNU/Linux server Installation documentation
+# GNU/Linux LAMP Server Installation documentation
 
 ## Summary
 
