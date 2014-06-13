@@ -26,8 +26,8 @@ Le but de ce document est de donner les éléments minimaux pour l'hébergement 
 
 ## 4. Prérequis généraux liés à l'OS : 
 
-* OS Linux, dernière version stable (LTS optionnel, pas formellement demandée). Préférence de l'équipe pour Debian ou Ubuntu, nous laissons l’Hébergeur juger de la meilleure distribution à utiliser.
-* Dual Core *minimum* + 8 Giga RAM *minimum*
+* OS Linux, dernière version stable (LTS optionnel, pas formellement demandée). Préférence de l'équipe pour Debian ou Ubuntu, nous laissons l’Hébergeur juger de la meilleure distribution à utiliser. GNU/Linux Ubuntu 14.04 64 bits LTS est un choix idéal.
+* Dual Core *minimum* + 4 Giga RAM *minimum*
 * architecture 64 bits
 * un accès FTP
 * un accès SSH, idéalement `sudoer` (pas obligatoire), pour un utilisateur linux `polypodes` avec des droits suffisant pour recharger la configuration d'Apache2 (`reload`) et éditer une crontab ; ajouter si possible cet utilisateur au `usergroup` utilisé par Apache2 (`:www-data`)
@@ -35,9 +35,7 @@ Le but de ce document est de donner les éléments minimaux pour l'hébergement 
 
 ## 5. PHP
 
-PHP 5.4.x, dernière version table.
-
-PHP (apache2 et cli)
+PHP 5.4.x ou supérieure, dernière version stable, versions apache2 et cli
 
 Extensions de PHP à installer :
 
@@ -102,17 +100,16 @@ Dans le cadre d'un accès SSH, logiciels à installer :
 Obligatoire si accès SSH :
 
 ```
-git vim curl
+git vim curl nodejs npm
 ```
+
+L'installation de NodeJs et NPM dernières versions stables est [très simple à réaliser en utilisant un PPA](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-an-ubuntu-14-04-server#HowToInstallUsingaPPA). NodeJs n'est pas utilisé ici en tant que serveur web mais en tant qu'utilitaire CLI uniquement.
 
 Optionnels (utiles pour le bon déploiement)
 
 ```
-imagemagick rsync tig tree lynx ack-grep most exuberant-ctags manpages-fr manpages-fr-extra manpages-dev nodejs npm
+imagemagick rsync tig tree manpages-fr manpages-fr-extra manpages-dev 
 ```
-
-NodeJs n'est pas utilisé ici en tant que serveur web mais en tant qu'utilitaire CLI uniquement.
-
 
 Applications à installer :
 
