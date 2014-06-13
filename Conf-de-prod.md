@@ -12,8 +12,9 @@ A cette fin, et n'ayant pas accès à SSH, pourriez-vous svp nous indiquer le r�
    $ php -i
    $ crontab -l
    $ mysql --version
+   $ mysql
 ```
-
+et dans `mysql`, le résultat des commandes suivantes :
 ```mysql
    > SHOW VARIABLES;
    > exit
