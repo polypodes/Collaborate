@@ -75,6 +75,10 @@ Password for `lespolypodes` : `ThePassword`
 
 (we use newlines in snippets here because of the f*cking PDF generation of this original markdown document, via [LightPaper](http://clockworkengine.com/lightpaper-mac/))
 
+## Set up `ntp`
+
+http://formation-debian.via.ecp.fr/ntp.html
+
 ### Update `apt` sources:
 
 ```bash
