@@ -26,7 +26,8 @@ Pour l’hébergement de sites web ou d’’applications web basées sur le CMS
 * architecture 64 bits
 * 10 Giga d'espace disque (backup non compris)
 * un accès FTP
-* un accès SSH, idéalement `sudoer` (pas obligatoire), pour  utilisateur linux `polypodes` avec des droits suffisant pour recharger la configuration d'Apache2 (`reload`) et éditer une crontab ; ajouter si possible cet utilisateur au `usergroup` utilisé par Apache2 (`:www-data`)
+* un accès SSH, idéalement `sudoer` (pas obligatoire), pour un utilisateur linux `polypodes` avec des droits suffisant pour recharger la configuration d'Apache2 (`reload`) et éditer une crontab ; ajouter si possible cet utilisateur au `usergroup` utilisé par Apache2 (`:www-data`)
+* le répertoire d'hébergement du site web à déployer (par exemple /var/www/[NomDuSiteWeb]) devra être accessible en écriture pour l'utilisateur linux `polypodes`. Suggestion: `chown www-data:www-data` + `chmod 775`, l'utilisateur linux `polypodes` étant déjà membre du groupe `:www-data`.
 
 * une stack LAMP tel que décrite ci-dessous
 
