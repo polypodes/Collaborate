@@ -122,6 +122,19 @@ expires
 setenvif
 ```
 
+Vérifier que pour le site courant la directive `AllowOverride` :
+
+> The Apache Virtualhost configuration must contain the directive AllowOverride All to allow Drupal's .htaccess file to be used.
+
+Vérifier la présence du 'mod_rewrite': 
+
+```php
+<?
+echo "<pre>";
+var_export(apache_get_modules());
+```
+
+
 ## 7. Logiciels utiles au bon déploiement
 
 Obligatoire avec l'accès SSH :
