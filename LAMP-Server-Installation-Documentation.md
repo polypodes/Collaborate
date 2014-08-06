@@ -31,13 +31,13 @@ THE SERVER.
 - `ssh root@IP.ADDRESS` / `ThePassWord`
 - `ssh lespolypodes@IP.ADDRESS ` / `ThePassWord`
 - MySQL `root` password: `ThePassWord`
-- PhpMyAdmin 'obfuscated' access is: [http://IP.ADDRESS/VeryVerySecretPhpMyAdmin](http://IP.ADDRESS/VeryVerySecretPhpMyAdmin)
+- PhpMyAdmin 'obfuscated' access is: [http://IP.ADDRESS/VeryVerySecretPhpMyAdmin](http://IP.ADDRESS/$$$VeryVerySecretPhpMyAdminURL==!)
 - PhpMyAdmin `root` password: `ThePassWord`
 - Client MySQL connection (database/login/password) : `TheClient_prod` / `TheClient_prod` / `ThePassWord` 
 
 ## Server hardware configuration memo
 
-This is **not a valid hardware recommandation**, consider it only as an example:
+This is **not a valid reliable production-ready recommandation**, consider it only as an example:
 
 - OVH VPS Cloud 4 or GANDI custom VPS Server or WhateverCloudProvider VPS
 - vCores: 2
@@ -245,7 +245,7 @@ sudo vim /etc/fail2ban/jail.local
 
 # PhpMyAdmin
 
-Configuring PhpMyAdmin: Modify ServerAlias `phpmyadmin` into `VeryVerySecretPhpMyAdmin` in `/etc/apache2/conf-enabled/phpmyadmin.conf`
+Configuring PhpMyAdmin: Modify ServerAlias `phpmyadmin` into `$$$VeryVerySecretPhpMyAdminURL==!` in `/etc/apache2/conf-enabled/phpmyadmin.conf`
 
 ```bash
 vim /etc/apache2/conf-enabled/phpmyadmin.conf
