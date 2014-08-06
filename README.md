@@ -20,5 +20,5 @@ Divers documents libres, ouverts et collaboratifs, partagés avec nos partenaire
 
 ### Licence
 
-The MIT License (MIT) - Copyright (c) 2013-2014 Les Polypodes - see LICENSE file.
+The MIT License (MIT) - Copyright (c) 2013-2014 Les Polypodes - see [LICENSE](LICENSE) file.
 
