@@ -4,8 +4,20 @@
 
 This document describes a basic LAMP (GNU/Linux, Apache2, MySQL, PHP) + GIT server installation, based on a Ubuntu 14.04 GNU/Linux distro. MySQL Databases are backuped locally, the whole server is backup via daily snapshots, as configured by the Client himself while he bought the server.
 
+## Severe warning
+
+**THIS DOCUMENT IS FOR A LAN DEV ENVIRONMENT ONLY**. PRODUCTION/DMZ ENVS CONF ALWAYS UP TO PROFESSIONAL SYSADMINS.
+
+THIS DOCUMENT IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SERVER OR THE USE OR OTHER DEALINGS IN
+THE SERVER.
+
 - This server configuration **do not include any monitoring**.
-- This document is f*cking **confidential** (after you started to fill logins / passwords)
+- One  you started to fill logins / passwords, this document become f*cking **confidential**
 
 ## Meta
 
