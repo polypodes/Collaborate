@@ -2,7 +2,7 @@
 
 Éléments non exhaustifs ; configuration définitive laissée à l’appréciation de l’Hébergeur
 
-* version : 1.2
+* version : 1.3
 * auteurs : [Ronan Guilloux](mailto:ronan@lespolypodes.com), Les Polypodes SARL (Nantes, France)
 * licence : [CC by-sa 3.0](http://creativecommons.org/licenses/by-sa/3.0/fr/)
 * [Ce document libre et ouvert est téléchargeable en ligne](https://github.com/polypodes/Collaborate/blob/master/Prerequis-pour-le-deploiement-de-Drupal.md)
@@ -122,7 +122,7 @@ expires
 setenvif
 ```
 
-Vérifier que pour le site courant la directive `AllowOverride` :
+Vérifier que pour le site courant la directive `AllowOverride` à `ALL`:
 
 > The Apache Virtualhost configuration must contain the directive AllowOverride All to allow Drupal's .htaccess file to be used.
 
@@ -134,8 +134,27 @@ echo "<pre>";
 var_export(apache_get_modules());
 ```
 
+## 7. Préparation des déploiements successifs (releases majeures, correctifs, etc.)
 
-## 7. Logiciels utiles au bon déploiement
+Le process de mise en (pre-)production de l'Agence se base sur une structure en `releases`, avec un `DocRoot` d'Apache2 pointant vers la dernière release courante, via un mécanisme de liens symbolique :
+
+```bash
+➜  myServer  tree
+.
+├── [me           2237]  Makefile
+├── [me             55]  current -> releases/2014-07-04--16-23-10     <- Apache2 vhost DocRoot
+├── [me             55]  old -> releases/2014-07-01--11-10-50         <- recent release we can rollback on
+├── [me            170]  releases
+└── [me            170]  uploads
+➜  myServer
+```
+
+Ce mécanisme de mise en (pre-)production basé sur des releases est courant (cf. [Capistrano](http://capistranorb.com) par exemple) - il est [présenté en détail ici](https://github.com/polypodes/Build-and-Deploy/tree/master/deploy)
+
+Du point de vue de l'hébegement, se mécanisme nécessite simplement que le `DocRoot` du vhost d'Apache2 soit connu de l'Agence, et que la directive `Options FollowSymLinks` y soit présente. 
+
+
+## 8. Logiciels utiles au bon déploiement
 
 Obligatoire avec l'accès SSH :
 
@@ -161,7 +180,7 @@ Pour chacun des logiciels listés dans cette section :
 root@server:/# whereis [nom_du_logiciel]
 ```
 
-## 8. Livrables
+## 9. Livrables
 
 Livrables obligatoires attendues par l'Agence :
 
@@ -172,7 +191,7 @@ Livrable optionnels :
 
 Configuration Puppet de l'environnement de production, qui sera utilisée par l'équipe de développement avec `vagrant`.
 
-## 9. Limites, conseil et assistance
+## 10. Limites, conseil et assistance
 
 Les points ci-dessus sont soit un rappel des pré-requis serveur de Drupal proposé par l'éditeur de ce CMS, soit des éléments permettant le bon déploiement des livrables de l'Agence. L'Hébergeur/l'infogéreur reste le seul interlocuteur du Client pour la mise en place effective de ces pré-requis. Dans le cas ou cela a été prévu, l'Agence peut jouer un rôle d'Assistance à Maitrise d'Ouvrage auprès du client pour l'aider à valider que ces pré-requis ont bien été installés.
 
