@@ -141,11 +141,11 @@ Le process de mise en (pre-)production de l'Agence se base sur une structure en 
 ```bash
 ➜  myServer  tree
 .
-├── [me           2237]  Makefile
-├── [me             55]  current -> releases/2014-07-04--16-23-10     <- Apache2 vhost DocRoot
-├── [me             55]  old -> releases/2014-07-01--11-10-50         <- recent release we can rollback on
-├── [me            170]  releases
-└── [me            170]  uploads
+├── [me  2237]  Makefile
+├── [me    55]  current -> releases/2014-07-04     <- Apache2 vhost DocRoot
+├── [me    55]  old -> releases/2014-07-01         <- rollback-able recent release
+├── [me   170]  releases                           <- all releases
+└── [me   170]  uploads                            <- shared, cross-releases folder
 ➜  myServer
 ```
 
