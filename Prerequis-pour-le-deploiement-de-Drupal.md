@@ -2,7 +2,7 @@
 
 Éléments non exhaustifs ; configuration définitive laissée à l’appréciation de l’Hébergeur
 
-* version : 1.3
+* version : 1.4
 * auteurs : [Ronan Guilloux](mailto:ronan@lespolypodes.com), Les Polypodes SARL (Nantes, France)
 * licence : [CC by-sa 3.0](http://creativecommons.org/licenses/by-sa/3.0/fr/)
 * [Ce document libre et ouvert est téléchargeable en ligne](https://github.com/polypodes/Collaborate/blob/master/Prerequis-pour-le-deploiement-de-Drupal.md)
@@ -25,12 +25,8 @@ Pour l’hébergement de sites web ou d’’applications web basées sur le CMS
 * Dual Core *minimum* + 8 Giga RAM *minimum*
 * architecture 64 bits
 * 10 Giga d'espace disque (backup non compris)
-* un accès SSH, idéalement `sudoer` (pas obligatoire), pour un utilisateur linux `polypodes` avec des droits suffisant pour recharger la configuration d'Apache2 (`reload`) et éditer une crontab ; ajouter si possible cet utilisateur au `usergroup` utilisé par Apache2 (`:www-data`)
-* le répertoire d'hébergement du site web à déployer (par exemple `/var/www/[NomDuSiteWeb]`) devra être accessible en écriture pour l'utilisateur linux `polypodes`. Suggestion: `chown www-data:www-data` + `chmod 775`, l'utilisateur linux `polypodes` étant déjà membre du groupe `:www-data`.
-
 * une stack LAMP tel que décrite ci-dessous
-
-L'accès SSH permet notamment le bon déploiement, via GIT ou rsync, des mises à jours et évolutions du site, et est rendu obligatoire par l'utilisation en ligne de commande de l'outil [Drush](https://github.com/drush-ops/drush), proposé par Drupal.
+* un accès SSH avec un compte utilisateur Unix/Linux (cf. plus loin)
 
 Tests :
 
@@ -42,7 +38,25 @@ root@server:/# uname -a
 root@server:~# free -m
 ```
 
-## 4. Configuration générale du serveur
+## 4. Prérequis généraux liés aux rôles et droits Unix/Linux :
+
+Dans l'utilisation des accès SSH au serveur web, le comptes utilisateur Linux utilisé par l'Agence Les Polypodes n'a pas besoin d'être `sudoer`, à partir du moment où un sysadmin est responsable de la maintenance et du monitoring de ce serveur.
+
+L'Agence demande 
+- un accès linux avec un compte `polypodes`
+- des droits suffisant pour éditer une crontab, 
+- des droits suffisant pour écrire dans un répertoire dédié au projet.
+- des droits suffisant pour lire le log Apache2 du site web (accès et erreurs)
+- un répertoire `home` permettant de stocker la configuration de _dotfiles_ (`.bashrc`, `.bash_history`, etc.)
+- l'accès à un shell fonctionnel : `bash`, ou idéalement `zsh`.
+- il est utile que cet utilisateur appartiennt au `usergroup` utilisé par Apache2 (`:www-data`)
+
+Le répertoire d'hébergement du site web à déployer (par exemple /var/www/NomDuProjet/[RacineDuSiteWeb]) devra être accessible en écriture pour l'utilisateur linux `polypodes`. Suggestion: `chown www-data:www-data` + `chmod 775`, l'utilisateur linux polypodes étant déjà membre du groupe `:www-data`.
+
+L'accès SSH permet notamment le bon déploiement, via GIT ou rsync, des mises à jours et évolutions du site. Il est rendu obligatoire par l'utilisation en ligne de commande de l'outil [Drush](https://github.com/drush-ops/drush), proposé par Drupal et l'utilisation en ligne de commande d'outils de build (make, grunt, gulp, etc.).
+
+
+## 5. Configuration générale du serveur
 
 La date et l'heure du serveur doivent être configurées sur le fuseau “Europe/Paris”
 
@@ -85,7 +99,7 @@ root@server:/# cat /etc/php5/apache2/php.ini | grep 'date.timezone'
 
 Attention à bien achever la *configuration* de certains modules comme APC pour la production, si ces modules ont été installés.
 
-## 5. MySQL
+## 6. MySQL
 
 L'Hébergeur est responsable de la backup des bases de données et de la bonne configuration des ressources allouées à MySQL.
 
@@ -99,7 +113,7 @@ root@server:/# php -i | grep 'PDO'
 
 Prévoir la création et la bonne configuration des droits pour un utilisateur MySQL dédié à Drupal
 
-## 6. Apache2 
+## 7. Apache2 
 
 Créer un vhost par environnement (production), en permettant la ré-écriture d'URL (`mode_rewrite`) et en incluant la directive `AllowOverride All`.
 
@@ -133,7 +147,7 @@ echo "<pre>";
 var_export(apache_get_modules());
 ```
 
-## 7. Préparation des déploiements successifs (releases majeures, correctifs, etc.)
+## 8. Préparation des déploiements successifs (releases majeures, correctifs, etc.)
 
 Le process de mise en (pre-)production de l'Agence se base sur une structure en `releases`, avec un `DocRoot` d'Apache2 pointant vers la dernière release courante, via un mécanisme de liens symbolique :
 
@@ -153,7 +167,7 @@ Ce mécanisme de mise en (pre-)production basé sur des releases est courant (cf
 Du point de vue de l'hébegement, se mécanisme nécessite simplement que le `DocRoot` du vhost d'Apache2 soit connu de l'Agence, et que la directive `Options FollowSymLinks` y soit présente. 
 
 
-## 8. Logiciels utiles au bon déploiement
+## 9. Logiciels utiles au bon déploiement
 
 Obligatoire avec l'accès SSH :
 
@@ -179,7 +193,7 @@ Pour chacun des logiciels listés dans cette section :
 root@server:/# whereis [nom_du_logiciel]
 ```
 
-## 9. Livrables
+## 10. Livrables
 
 Livrables obligatoires attendues par l'Agence :
 
@@ -190,7 +204,7 @@ Livrable optionnels :
 
 Configuration Puppet de l'environnement de production, qui sera utilisée par l'équipe de développement avec `vagrant`.
 
-## 10. Limites, conseil et assistance
+## 11. Limites, conseil et assistance
 
 Les points ci-dessus sont soit un rappel des pré-requis serveur de Drupal proposé par l'éditeur de ce CMS, soit des éléments permettant le bon déploiement des livrables de l'Agence. L'Hébergeur/l'infogéreur reste le seul interlocuteur du Client pour la mise en place effective de ces pré-requis. Dans le cas ou cela a été prévu, l'Agence peut jouer un rôle d'Assistance à Maitrise d'Ouvrage auprès du client pour l'aider à valider que ces pré-requis ont bien été installés.
 
