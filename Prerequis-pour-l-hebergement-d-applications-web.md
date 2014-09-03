@@ -2,7 +2,7 @@
 
 *Résumé* : Ce document liste les pré-requis de l'Agence Les Polypodes pour réaliser un déploiement d'application Symfony2 sur un serveur web. Ce document reprend la documentation officielle de Symfony2 concernant les prérequis techniques, et détaille une configuration optimale pour l'industrialisation du déploiement. Ces éléments sont non exhaustifs : la configuration définitive est laissée à l’appréciation de l’Hébergeur qui maintient ce serveur et du Client qui reste le donneur d'ordre final.
 
-* version : 1.3
+* version : 1.4
 * auteurs : [Ronan Guilloux](mailto:ronan@lespolypodes.com), Les Polypodes SARL (Nantes, France)
 * licence : http://creativecommons.org/licenses/by-sa/3.0/fr/ 
 * [Ce document libre et ouvert est téléchargeable en ligne](https://github.com/polypodes/Collaborate/blob/master/Prerequis-pour-l-hebergement-d-applications-web.md)
@@ -29,12 +29,12 @@ Le but de ce document est de donner les éléments minimaux pour l'hébergement 
 * OS Linux, dernière version stable (LTS optionnel, pas formellement demandée). Préférence de l'équipe pour Debian ou Ubuntu, nous laissons l’Hébergeur juger de la meilleure distribution à utiliser. GNU/Linux Ubuntu 14.04 64 bits LTS est un choix idéal.
 * Dual Core *minimum* + 4 Giga RAM *minimum*
 * architecture 64 bits
-* un accès SSH (voir section suivante)
+* un accès SSH avec un compte utilisateur Unix/Linux (cf. plus loin)
 * une stack LAMP tel que décrite ci-dessous
 
-## 5. Prérequis généraux liés aux rôles et droits Unix :
+## 5. Prérequis généraux liés aux rôles et droits Unix/Linux :
 
-Dans le cas des accès SSH au serveur web, le comptes utilisateur Linux utilisé par l'Agence Les Polypodes n'a pas besoin d'être `sudoer`, à partir du moment où un sysadmin est responsable de la maintennance et du monitoring de ce serveur.
+Dans l'utilisation des accès SSH au serveur web, le comptes utilisateur Linux utilisé par l'Agence Les Polypodes n'a pas besoin d'être `sudoer`, à partir du moment où un sysadmin est responsable de la maintenance et du monitoring de ce serveur.
 
 L'Agence demande 
 - un accès linux avec un compte `polypodes`
@@ -45,9 +45,9 @@ L'Agence demande
 - l'accès à un shell fonctionnel : `bash`, ou idéalement `zsh`.
 - il est utile que cet utilisateur appartiennt au `usergroup` utilisé par Apache2 (`:www-data`)
 
-Le répertoire d'hébergement du site web à déployer (par exemple /var/www/NomDuProjet/[RacineDuSiteWeb]) devra être accessible en écriture pour l'utilisateur linux polypodes. Suggestion: `chown www-data:www-data` + `chmod 775`, l'utilisateur linux polypodes étant déjà membre du groupe `:www-data`.
+Le répertoire d'hébergement du site web à déployer (par exemple /var/www/NomDuProjet/[RacineDuSiteWeb]) devra être accessible en écriture pour l'utilisateur linux `polypodes`. Suggestion: `chown www-data:www-data` + `chmod 775`, l'utilisateur linux polypodes étant déjà membre du groupe `:www-data`.
 
-L'accès SSH permet notamment le bon déploiement, via GIT ou rsync, des mises à jours et évolutions du site, et est rendu obligatoire par l'utilisation en ligne de commande d'outil de build (make, grunt, gulp, drush, etc.).
+L'accès SSH permet notamment le bon déploiement, via GIT ou rsync, des mises à jours et évolutions du site, et est rendu obligatoire par l'utilisation en ligne de commande d'outils de build (make, grunt, gulp, drush, etc.).
 
 ## 6. Préparation des déploiements successifs (releases majeures, correctifs, etc.)
 
