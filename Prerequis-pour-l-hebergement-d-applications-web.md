@@ -41,7 +41,9 @@ L'Agence demande
 - des droits suffisant pour éditer une crontab, 
 - des droits suffisant pour écrire dans un répertoire dédié au projet.
 - des droits suffisant pour lire le log Apache2 du site web (accès et erreurs)
-- il est utile que cet utilisateur appartiennt au `usergroup` utilisé par Apache2 (`:www-data`).
+- un répertoire `home` permettant de stocker la configuration de _dotfiles_ (`.bashrc`, `.bash_history`, etc.)
+- l'accès à un shell fonctionnel : `bash`, ou idéalement `zsh`.
+- il est utile que cet utilisateur appartiennt au `usergroup` utilisé par Apache2 (`:www-data`)
 
 Le répertoire d'hébergement du site web à déployer (par exemple /var/www/NomDuProjet/[RacineDuSiteWeb]) devra être accessible en écriture pour l'utilisateur linux polypodes. Suggestion: `chown www-data:www-data` + `chmod 775`, l'utilisateur linux polypodes étant déjà membre du groupe `:www-data`.
 
