@@ -4,7 +4,7 @@
 
 * version : 1.4
 * auteurs : [Ronan Guilloux](mailto:ronan@lespolypodes.com), Les Polypodes SARL (Nantes, France)
-* licence : http://creativecommons.org/licenses/by-sa/3.0/fr/ 
+* licence : [CC by-sa 3.0 fr](http://creativecommons.org/licenses/by-sa/3.0/fr/)
 * [Ce document libre et ouvert est téléchargeable en ligne](https://github.com/polypodes/Collaborate/blob/master/Prerequis-pour-l-hebergement-d-applications-web.md)
 
 ## 1. Contexte
