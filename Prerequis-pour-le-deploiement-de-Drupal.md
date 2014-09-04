@@ -12,6 +12,9 @@
 
 Pour l’hébergement de sites web ou d’’applications web basées sur le CMS Drupal version 7.x, l'agence Les Polypodes propose un document non exhaustif de pré-requis techniques, à l’intention de l’Hébergeur retenu par le Client.
 
+Ce document se veut une base de dialogue cordial, un outil de référence pour une coopération réussie entre l'Agence et l'Hébergeur, dans l'esprit du mouvement [__devops__](http://fr.wikipedia.org/wiki/Devops).
+
+
 ## 2. Rôles et vocabulaire 
 
 * L'Agence Les Polypodes est l’agence qui conçoit l’application web, et qui le cas échéant la déploie et la maintient,
