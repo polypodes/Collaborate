@@ -13,6 +13,8 @@ Pour l’hébergement de sites web ou d’’applications web basées sur le sta
 l'agence Les Polypodes propose un document non exhaustif de prérequis techniques,
 à l’intention de l’Hébergeur retenu par le Client.
 
+Ce document se veut une base de dialogue cordiale, un outil de référence pour une coopération réussie entre l'Agence et l'Hébergeur, dans l'esprit du mouvement [__devops__](http://fr.wikipedia.org/wiki/Devops).
+
 ## 2. But
 
 Le but de ce document est de donner les éléments minimaux pour l'hébergement d'applications PHP basées sur Symfony 2.x, Silex 1.x ou toute application PHP métier basée sur PHP 5.4.
