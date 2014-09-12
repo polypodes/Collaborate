@@ -97,12 +97,14 @@ phar.require_hash = Off
 detect_unicode = Off
 ```
 
-Par ailleurs la configuration de PHP doit se conformer aux pré-requis du framework Symfony 2.* (dernière version stable) : http://symfony.com/doc/current/reference/requirements.html, y compris tous les pré-requis optionnels.
+La configuration de PHP doit se conformer aux pré-requis du framework Symfony 2.* (dernière version stable) : http://symfony.com/doc/current/reference/requirements.html, y compris tous les pré-requis optionnels.
 
 
 “Some systems don't support chmod +a, but do support another utility calledsetfacl. You may need to enable ACL support on your partition and install setfacl before using it (as is the case with Ubuntu)”
 
 Attention à bien achever la *configuration* de certains modules comme APC pour la production, si ces modules ont été installés.
+
+Pour évaluer la présence de vulnérabilités critiques dans la version de PHP installée, l'Agence utilise [versionscan](https://github.com/psecio/versionscan).
 
 ## 8. MySQL
 
