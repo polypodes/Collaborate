@@ -102,6 +102,8 @@ root@server:/# cat /etc/php5/apache2/php.ini | grep 'date.timezone'
 
 Attention à bien achever la *configuration* de certains modules comme APC pour la production, si ces modules ont été installés.
 
+Pour évaluer la présence de vulnérabilités critiques dans la version de PHP installée, l'Agence utilise [versionscan](https://github.com/psecio/versionscan).
+
 ## 6. MySQL
 
 L'Hébergeur est responsable de la backup des bases de données et de la bonne configuration des ressources allouées à MySQL.
