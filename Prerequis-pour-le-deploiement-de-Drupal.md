@@ -2,7 +2,7 @@
 
 Éléments non exhaustifs ; configuration définitive laissée à l’appréciation de l’Hébergeur
 
-* version : 1.4
+* version : 1.5
 * auteurs : [Ronan Guilloux](mailto:ronan@lespolypodes.com), Les Polypodes SARL (Nantes, France)
 * licence : [CC by-sa 3.0 fr](http://creativecommons.org/licenses/by-sa/3.0/fr/)
 * [Ce document libre et ouvert est téléchargeable en ligne](https://github.com/polypodes/Collaborate/blob/master/Prerequis-pour-le-deploiement-de-Drupal.md)
@@ -46,6 +46,7 @@ root@server:~# free -m
 Dans l'utilisation des accès SSH au serveur web, le comptes utilisateur Linux utilisé par l'Agence Les Polypodes n'a pas besoin d'être `sudoer`, à partir du moment où un sysadmin est responsable de la maintenance et du monitoring de ce serveur.
 
 L'Agence demande 
+
 - un accès linux avec un compte `polypodes`
 - des droits suffisant pour éditer une crontab, 
 - des droits suffisant pour écrire dans un répertoire dédié au projet.
@@ -80,43 +81,43 @@ root@server:~# php -v
 root@server:~# php -i
 ```
 
-Configuration complémentaire de PHP : (pour *apache2* et pour *cli*)
+Configuration complémentaire de PHP : (pour *apache2* **et pour *cli* **)
 
 Exemple de tests pour `apache2` :
 
 ```bash
-root@server:/# cat /etc/php5/apache2/php.ini | grep 'session.cache_limiter'
-root@server:/# cat /etc/php5/apache2/php.ini | grep 'session.auto_start'
-root@server:/# cat /etc/php5/apache2/php.ini | grep 'magic_quotes_gpc'
-root@server:/# cat /etc/php5/apache2/php.ini | grep 'register_globals'
-root@server:/# cat /etc/php5/apache2/php.ini | grep 'memory_limit'
+root@server:/# cd /etc/php5/apache2/
+root@server:/# cat php.ini | grep 'session.cache_limiter'
+root@server:/# cat php.ini | grep 'session.auto_start'
+root@server:/# cat php.ini | grep 'magic_quotes_gpc'
+root@server:/# cat php.ini | grep 'register_globals'
+root@server:/# cat php.ini | grep 'memory_limit'
 root@server:/# php -i | grep 'xml'
 root@server:/# ll /etc/php5/apache2/conf.d/ | grep 'gd'
 root@server:/# php -i | grep 'json'
 root@server:/# php -i | grep 'hash'
-root@server:/# cat /etc/php5/apache2/php.ini | grep 'expose_php'
+root@server:/# cat php.ini | grep 'expose_php'
 root@server:/# php -i | grep 'allow_url_fopen'
-root@server:/# cat /etc/php5/apache2/php.ini | grep 'display_errors'
-root@server:/# cat /etc/php5/apache2/php.ini | grep 'date.timezone'
+root@server:/# cat php.ini | grep 'display_errors'
+root@server:/# cat php.ini | grep 'date.timezone'
 ```
 
 Attention à bien achever la *configuration* de certains modules comme APC pour la production, si ces modules ont été installés.
 
-Pour évaluer la présence de vulnérabilités critiques dans la version de PHP installée, l'Agence utilise [versionscan](https://github.com/psecio/versionscan).
+Pour évaluer la présence de vulnérabilités critiques éventuelle dans la version de PHP installée, l'Agence utilise [versionscan](https://github.com/psecio/versionscan).
 
 ## 6. MySQL
 
-L'Hébergeur est responsable de la backup des bases de données et de la bonne configuration des ressources allouées à MySQL.
+L'Hébergeur est responsable de la bonne configuration des ressources allouées à MySQL, du plan de *backup* des bases de données, de la mise en oeuvre de ces sauvegardes et de leur restauration à la demande du Client final ou de l'Agence.
 
 Tests :
 
 ```bash
 root@server:/# mysql -V
-mysql  Ver 14.14 Distrib 5.1.49, for debian-linux-gnu (x86_64) using readline 6.1
 root@server:/# php -i | grep 'PDO'
 ```
 
-Prévoir la création et la bonne configuration des droits pour un utilisateur MySQL dédié à Drupal
+Prévoir la création et la bonne configuration des droits pour un utilisateur MySQL dédié à Drupal, à créer par l'Hébergeur et à transmettre à l'Agence.
 
 ## 7. Apache2 
 
@@ -154,22 +155,27 @@ var_export(apache_get_modules());
 
 ## 8. Préparation des déploiements successifs (releases majeures, correctifs, etc.)
 
-Le process de mise en (pre-)production de l'Agence se base sur une structure en `releases`, avec un `DocRoot` d'Apache2 pointant vers la dernière release courante, via un mécanisme de liens symbolique :
+Le process de mise en (pré-)production de l'Agence se base sur une structure en `releases`, avec un `DocumentRoot` du *vhost* d'Apache2 pointant vers la dernière release courante, via un mécanisme de liens symbolique :
 
 ```bash
 ➜  myServer  tree
 .
 ├── [me  2237]  Makefile
-├── [me    55]  current -> releases/2014-07-04     <- Apache2 vhost DocRoot
-├── [me    55]  old -> releases/2014-07-01         <- rollback-able recent release
-├── [me   170]  releases                           <- all releases
-└── [me   170]  uploads                            <- shared, cross-releases folder
+├── [me      55]  current -> releases/2014-07-04
+├── [me      55]  old -> releases/2014-07-01
+├── [me    170]  releases
+└── [me    170]  uploads 
 ➜  myServer
 ```
 
-Ce mécanisme de mise en (pre-)production basé sur des releases est courant (cf. [Capistrano](http://capistranorb.com) par exemple) - il est [présenté en détail ici](https://github.com/polypodes/Build-and-Deploy/tree/master/deploy)
+- `current` est le `DocumentRoot` du *virtualhost* dans Apache2
+- `old` est une release précédente, sur lequel on peut faire un *rollback*
+- `releases` est le répertoire contenant toutes les *releases*
+- `uploads` est un répertoire partagé entre toutes les *releases*, contenant les fichiers et médias envoyés par le webmaster sur le serveur (images, sons, vidéos, PDFs, etc.). Un lien symbolique rend disponible ce répertoire dans le dossier de chaque *release*.
 
-Du point de vue de l'hébegement, se mécanisme nécessite simplement que le `DocRoot` du vhost d'Apache2 soit connu de l'Agence, et que la directive `Options FollowSymLinks` y soit présente. 
+Ce mécanisme de mise en (pré-)production basé sur des *releases* est courant (cf. [Capistrano](http://capistranorb.com) par exemple) - il est [présenté en détail ici](https://github.com/polypodes/Build-and-Deploy/tree/master/deploy)
+
+Du point de vue de l'hébergement, se mécanisme nécessite simplement que le dossier parent du `DocumentRoot` du *vhost* d'Apache2 soit accessible en écriture pour l'Agence, et que la directive `Options FollowSymLinks` y soit présente. 
 
 
 ## 9. Logiciels utiles au bon déploiement
@@ -177,13 +183,14 @@ Du point de vue de l'hébegement, se mécanisme nécessite simplement que le `Do
 Obligatoire avec l'accès SSH :
 
 ```
-git vim curl
+git vim rsync curl imagemagick 
 ```
 
 Optionnels (utiles pour le bon déploiement)
 
 ```
-imagemagick rsync tig tree lynx ack-grep most exuberant-ctags manpages-fr manpages-fr-extra manpages-dev
+tig tree lynx ack-grep 
+manpages-fr manpages-fr-extra manpages-dev
 ```
 
 Applications à installer :
@@ -207,7 +214,8 @@ Livrables obligatoires attendues par l'Agence :
 
 Livrable optionnels :
 
-Configuration Puppet de l'environnement de production, qui sera utilisée par l'équipe de développement avec `vagrant`.
+Si l'hébergeur utilise Puppet pour provisionner l'environnement de production, cette configuration sera appréciée par l'équipe de développement avec `vagrant`.
+
 
 ## 11. Limites, conseil et assistance
 
