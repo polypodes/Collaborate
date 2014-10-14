@@ -2,7 +2,7 @@
 
 *Résumé* : Ce document liste les pré-requis de l'Agence Les Polypodes pour réaliser un déploiement d'application Symfony2 sur un serveur web. Ce document reprend la documentation officielle de Symfony2 concernant les prérequis techniques, et détaille une configuration optimale pour l'industrialisation du déploiement. Ces éléments sont non exhaustifs : la configuration définitive est laissée à l’appréciation de l’Hébergeur qui maintient ce serveur et du Client qui reste le donneur d'ordre final.
 
-* version : 1.4
+* version : 1.5.1
 * auteurs : [Ronan Guilloux](mailto:ronan@lespolypodes.com), Les Polypodes SARL (Nantes, France)
 * licence : [CC by-sa 3.0 fr](http://creativecommons.org/licenses/by-sa/3.0/fr/)
 * [Ce document libre et ouvert est téléchargeable en ligne](https://github.com/polypodes/Collaborate/blob/master/Prerequis-pour-l-hebergement-d-applications-web.md)
@@ -22,8 +22,8 @@ Le but de ce document est de donner les éléments minimaux pour l'hébergement 
 
 ## 3. Rôles et vocabulaire 
 
-* L'Agence Les Polypodes est l’agence qui conçoit l’application web,
-* l’Hébergeur est responsable de l’hébergement et de l’infogérance éventuelle de l’application livrée,
+* L'Agence Les Polypodes est l’agence qui conçoit l’application web, et qui le cas échéant la déploie et/ou en assure la maintenance ;
+* l’Hébergeur/Infogéreur est responsable de l’hébergement et/ou de l’infogérance : il assure la sécurité, de la mise à jour et de la surveillance des logiciels serveurs : la pile LAMP (OS GNU/Linux, PHP, Apache2, MySQL), et tous les autres logiciels nécessaires installés sur le serveur. Sauf indications contraires, il n'assure pas l'infogérance de l'application web ;
 * le Client final est l'entité qui réalise la commande et la recette de l’application et de son hébergement.
 
 ## 4. Prérequis généraux liés à l'OS : 
@@ -77,7 +77,7 @@ PHP 5.4.x ou supérieure, dernière version stable, versions apache2 et cli
 Extensions de PHP à installer :
 
 ```
-php5-dev php-apc php5-mysql php5-cli
+php5-dev php5-mysql php5-cli
 php5-curl php5-gd php5-imagick
 php5-imap php5-xsl php5-common
 php5-mcrypt php5-memcache
@@ -102,9 +102,17 @@ La configuration de PHP doit se conformer aux pré-requis du framework Symfony 2
 
 “Some systems don't support chmod +a, but do support another utility calledsetfacl. You may need to enable ACL support on your partition and install setfacl before using it (as is the case with Ubuntu)”
 
-Attention à bien achever la *configuration* de certains modules comme APC pour la production, si ces modules ont été installés.
+Attention à bien achever la *configuration* de certains modules de PHP pour l'environnement de production.
 
-Pour évaluer la présence de vulnérabilités critiques dans la version de PHP installée, l'Agence utilise [versionscan](https://github.com/psecio/versionscan).
+### Caches d'OpCode et accélérateurs pour PHP
+
+Jusqu'à PHP 5.4.\* inclus, l'Agence recommande d'ajouter un accélérateur permettant de gérer le cache d'OpCode pour PHP, en particulier [APC](http://php.net/manual/en/book.apc.php).
+
+À partir de PHP 5.5.*, PHP intègre son propre moteur de cache d'Opcode, [Zend Opcache](http://en.wikipedia.org/wiki/List_of_PHP_accelerators#Zend_Opcache_.28ex._Zend_Optimizer.2B.29). Dès lors, il n'est pas requis d'installer un autre accélérateur.
+
+### Sécurité et mise à jour des logiciels côté serveur
+
+A titre d'information, pour évaluer la présence de vulnérabilités critiques éventuelle dans la version de PHP installée, l'Agence utilise [versionscan](https://github.com/psecio/versionscan).
 
 ## 8. MySQL
 
