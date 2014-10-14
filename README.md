@@ -23,6 +23,19 @@ Le but principal de ce document est de s'assurer que la création au format PSD 
 * Modèle de courrier pour [valider un environnement de production](Demande-Details-Configuration-De-Production.md) déjà existant, dépourvu d'accès SSH, et devant accueillir une nouvelle application web développée par nous.
 * Modèle de [configuration serveur LAMP pour un environnement de développement](LAMP-Server-Installation-Documentation.md)
 
+
+### Exports
+
+*HTML*:
+
+```bash
+[brew/apt-get] install pandoc
+make
+```
+
+*PDF*: Use [GitPrint](http://gitprint.com) (browser extension or bookmarklet) and go to https://github.com/polypodes/Collaborate.
+
+
 ### Licence
 
 The MIT License (MIT) - Copyright (c) 2013-2014 Les Polypodes - see [LICENSE](LICENSE) file.
