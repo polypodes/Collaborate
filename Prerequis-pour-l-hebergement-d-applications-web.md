@@ -17,7 +17,7 @@ Ce document se veut une base de dialogue cordial, un outil de référence pour u
 
 ## 2. But
 
-Le but de ce document est de donner les éléments minimaux pour l'hébergement d'applications PHP basées sur Symfony 2.x, Silex 1.x ou toute application PHP métier basée sur PHP 5.*, dernière version stable.
+Le but de ce document est de donner les éléments minimaux pour l'hébergement d'applications PHP basées sur Symfony 2.x, Silex 1.x ou toute application PHP métier basée sur PHP 5.x, dernière version stable.
 
 
 ## 3. Rôles et vocabulaire 
@@ -97,7 +97,7 @@ phar.require_hash = Off
 detect_unicode = Off
 ```
 
-La configuration de PHP doit se conformer aux pré-requis du framework Symfony 2.* (dernière version stable) : http://symfony.com/doc/current/reference/requirements.html, y compris tous les pré-requis optionnels.
+La configuration de PHP doit se conformer aux pré-requis du framework Symfony 2.x (dernière version stable) : http://symfony.com/doc/current/reference/requirements.html, y compris tous les pré-requis optionnels.
 
 
 “Some systems don't support chmod +a, but do support another utility calledsetfacl. You may need to enable ACL support on your partition and install setfacl before using it (as is the case with Ubuntu)”
@@ -106,9 +106,9 @@ Attention à bien achever la *configuration* de certains modules de PHP pour l'e
 
 ### Caches d'OpCode et accélérateurs pour PHP
 
-Jusqu'à PHP 5.4.\* inclus, l'Agence recommande d'ajouter un accélérateur permettant de gérer le cache d'OpCode pour PHP, en particulier [APC](http://php.net/manual/en/book.apc.php).
+Jusqu'à PHP 5.4.x inclus, l'Agence recommande d'ajouter un accélérateur permettant de gérer le cache d'OpCode pour PHP, en particulier [APC](http://php.net/manual/en/book.apc.php).
 
-À partir de PHP 5.5.*, PHP intègre son propre moteur de cache d'Opcode, [Zend Opcache](http://en.wikipedia.org/wiki/List_of_PHP_accelerators#Zend_Opcache_.28ex._Zend_Optimizer.2B.29). Dès lors, il n'est pas requis d'installer un autre accélérateur.
+À partir de PHP 5.5.x, PHP intègre son propre moteur de cache d'Opcode, [Zend Opcache](http://en.wikipedia.org/wiki/List_of_PHP_accelerators#Zend_Opcache_.28ex._Zend_Optimizer.2B.29). Dès lors, il n'est pas requis d'installer un autre accélérateur.
 
 ### Sécurité et mise à jour des logiciels côté serveur
 
