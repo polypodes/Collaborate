@@ -2,7 +2,7 @@
 
 Éléments non exhaustifs ; configuration définitive laissée à l’appréciation de l’Hébergeur
 
-* version : 1.5
+* version : 1.5.1
 * auteurs : [Ronan Guilloux](mailto:ronan@lespolypodes.com), Les Polypodes SARL (Nantes, France)
 * licence : [CC by-sa 3.0 fr](http://creativecommons.org/licenses/by-sa/3.0/fr/)
 * [Ce document libre et ouvert est téléchargeable en ligne](https://github.com/polypodes/Collaborate/blob/master/Prerequis-pour-le-deploiement-de-Drupal.md)
@@ -17,8 +17,8 @@ Ce document se veut une base de dialogue cordial, un outil de référence pour u
 
 ## 2. Rôles et vocabulaire 
 
-* L'Agence Les Polypodes est l’agence qui conçoit l’application web, et qui le cas échéant la déploie et la maintient,
-* l’Hébergeur est responsable de l’hébergement et de l’infogérance éventuelle de l’application livrée,
+* L'Agence Les Polypodes est l’agence qui conçoit l’application web, et qui le cas échéant la déploie et/ou en assure la maintenance ;
+* l’Hébergeur/Infogéreur est responsable de l’hébergement et/ou de l’infogérance : il assure la sécurité, de la mise à jour et de la surveillance des logiciels serveurs : la pile LAMP (OS GNU/Linux, PHP, Apache2, MySQL), et tous les autres logiciels nécessaires installés sur le serveur. Sauf indications contraires, il n'assure pas l'infogérance de l'application web ;
 * le Client final est l'entité qui réalise la commande et la recette de l’application et de son hébergement.
 
 ## 3. Prérequis généraux liés à l'OS : 
@@ -102,9 +102,17 @@ root@server:/# cat php.ini | grep 'display_errors'
 root@server:/# cat php.ini | grep 'date.timezone'
 ```
 
-Attention à bien achever la *configuration* de certains modules comme APC pour la production, si ces modules ont été installés.
+Attention à bien achever la *configuration* de certains modules de PHP pour l'environnement de production.
 
-Pour évaluer la présence de vulnérabilités critiques éventuelle dans la version de PHP installée, l'Agence utilise [versionscan](https://github.com/psecio/versionscan).
+### Caches d'OpCode et accélérateurs pour PHP
+
+Jusqu'à PHP 5.4.\* inclus, l'Agence recommande d'ajouter un accélérateur permettant de gérer le cache d'OpCode pour PHP, en particulier [APC](http://php.net/manual/en/book.apc.php).
+
+À partir de PHP 5.5.*, PHP intègre son propre moteur de cache d'Opcode, [Zend Opcache](http://en.wikipedia.org/wiki/List_of_PHP_accelerators#Zend_Opcache_.28ex._Zend_Optimizer.2B.29). Dès lors, il n'est pas requis d'installer un autre accélérateur.
+
+### Sécurité et mise à jour des logiciels côté serveur
+
+A titre d'information, pour évaluer la présence de vulnérabilités critiques éventuelle dans la version de PHP installée, l'Agence utilise [versionscan](https://github.com/psecio/versionscan).
 
 ## 6. MySQL
 
@@ -221,7 +229,7 @@ Si l'hébergeur utilise Puppet pour provisionner l'environnement de production, 
 
 Les points ci-dessus sont soit un rappel des pré-requis serveur de Drupal proposé par l'éditeur de ce CMS, soit des éléments permettant le bon déploiement des livrables de l'Agence. L'Hébergeur/l'infogéreur reste le seul interlocuteur du Client pour la mise en place effective de ces pré-requis. Dans le cas ou cela a été prévu, l'Agence peut jouer un rôle d'Assistance à Maitrise d'Ouvrage auprès du client pour l'aider à valider que ces pré-requis ont bien été installés.
 
-En-dehors des points indiqués comme optionnels, tous ces points sont importants et peuvent devenir bloquants pour le succès du déploiement de l’application web basée sur le CMS Drupal 7.x. Sur ces points, l'Agence Les Polypodes demande a être prévenue dès qu'une incompréhension ou un doute survient du côté du Client ou de l'Hébergeur qui doit livrer l’hébergement et éventuellement assurer l’infogérance de l’application, et se tient prête à expliquer le détail et la raison de chaque pré-requis. 
+En-dehors des points indiqués comme optionnels, tous ces points sont importants et peuvent devenir bloquants pour le succès du déploiement de l’application web basée sur le CMS Drupal 7.x ou 8.x. Sur ces points, l'Agence Les Polypodes demande a être prévenue dès qu'une incompréhension ou un doute survient du côté du Client ou de l'Hébergeur qui doit livrer l’hébergement et éventuellement assurer l’infogérance de l’application, et se tient prête à expliquer le détail et la raison de chaque pré-requis. 
 
 Il revient à l'Hébergeur de réaliser l'installation et la configuration des pré-requis de Drupal, et de s'assurer que ces pré-requis de Drupal ne mettent pas en cause l'intégrité, la disponibilité et la performances de l'infrastrucutre existante (en cas de ré-utilisation d'un serveur de production en particulier). 
 
