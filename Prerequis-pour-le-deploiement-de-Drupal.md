@@ -68,7 +68,7 @@ Version et configuration d'Apache2, PHP et MySQL : La configuration de PHP doit 
 
 * [https://drupal.org/requirements](https://drupal.org/requirements)
 * [https://drupal.org/requirements/webserver](https://drupal.org/requirements/webserver)
-* [https://drupal.org/requirements/php](https://drupal.org/requirements/php) : PHP 5.4 ou supérieur
+* [https://drupal.org/requirements/php](https://drupal.org/requirements/php) : PHP 5.4 minimum, dernière version stable de PHP 5.* recommandée
 * [https://drupal.org/requirements/database](https://drupal.org/requirements/database)
 * [https://drupal.org/requirements/pdo](https://drupal.org/requirements/pdo)
 
