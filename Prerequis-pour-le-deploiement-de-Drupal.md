@@ -68,7 +68,7 @@ Version et configuration d'Apache2, PHP et MySQL : La configuration de PHP doit 
 
 * [https://drupal.org/requirements](https://drupal.org/requirements)
 * [https://drupal.org/requirements/webserver](https://drupal.org/requirements/webserver)
-* [https://drupal.org/requirements/php](https://drupal.org/requirements/php) : PHP 5.4 minimum, dernière version stable de PHP 5.* recommandée
+* [https://drupal.org/requirements/php](https://drupal.org/requirements/php) : PHP 5.4 minimum, dernière version stable de PHP 5.x recommandée
 * [https://drupal.org/requirements/database](https://drupal.org/requirements/database)
 * [https://drupal.org/requirements/pdo](https://drupal.org/requirements/pdo)
 
@@ -106,9 +106,9 @@ Attention à bien achever la *configuration* de certains modules de PHP pour l'e
 
 ### Caches d'OpCode et accélérateurs pour PHP
 
-Jusqu'à PHP 5.4.\* inclus, l'Agence recommande d'ajouter un accélérateur permettant de gérer le cache d'OpCode pour PHP, en particulier [APC](http://php.net/manual/en/book.apc.php).
+Jusqu'à PHP 5.4.x inclus, l'Agence recommande d'ajouter un accélérateur permettant de gérer le cache d'OpCode pour PHP, en particulier [APC](http://php.net/manual/en/book.apc.php).
 
-À partir de PHP 5.5.*, PHP intègre son propre moteur de cache d'Opcode, [Zend Opcache](http://en.wikipedia.org/wiki/List_of_PHP_accelerators#Zend_Opcache_.28ex._Zend_Optimizer.2B.29). Dès lors, il n'est pas requis d'installer un autre accélérateur.
+À partir de PHP 5.5, PHP intègre son propre moteur de cache d'Opcode, [Zend Opcache](http://en.wikipedia.org/wiki/List_of_PHP_accelerators#Zend_Opcache_.28ex._Zend_Optimizer.2B.29). Dès lors, il n'est pas requis d'installer un autre accélérateur.
 
 ### Sécurité et mise à jour des logiciels côté serveur
 
