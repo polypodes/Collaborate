@@ -17,7 +17,7 @@ Ce document se veut une base de dialogue cordial, un outil de référence pour u
 
 ## 2. But
 
-Le but de ce document est de donner les éléments minimaux pour l'hébergement d'applications PHP basées sur Symfony 2.x, Silex 1.x ou toute application PHP métier basée sur PHP 5.4.
+Le but de ce document est de donner les éléments minimaux pour l'hébergement d'applications PHP basées sur Symfony 2.x, Silex 1.x ou toute application PHP métier basée sur PHP 5.*, dernière version stable.
 
 
 ## 3. Rôles et vocabulaire 
@@ -72,7 +72,7 @@ Du point de vue de l'hébegement, se mécanisme nécessite simplement que le `Do
 
 ## 7. PHP
 
-PHP 5.4.x ou supérieure, dernière version stable, versions apache2 et cli
+PHP 5, dernière version stable, versions apache2 et cli
 
 Extensions de PHP à installer :
 
