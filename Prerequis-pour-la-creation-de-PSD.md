@@ -1,3 +1,5 @@
+![#Les Polypodes](header.png)
+
 # Prérequis pour la création de fichiers PSD en vue d’une intégration  HTML 5 / CSS 3 incluant des objectifs de responsive design.
 
 version 1.1
