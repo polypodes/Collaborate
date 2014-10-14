@@ -10,7 +10,7 @@
 
 ## 1. But
 
-Pour l’hébergement de sites web ou d’applications web basées sur le CMS Drupal version 7.x, l'agence Les Polypodes propose un document non exhaustif de pré-requis techniques, à l’intention de l’Hébergeur retenu par le Client.
+Pour l’hébergement de sites web ou d’applications web basées sur le CMS Drupal version 7.x et 8.x, l'agence Les Polypodes propose un document non exhaustif de pré-requis techniques, à l’intention de l’Hébergeur retenu par le Client.
 
 Ce document se veut une base de dialogue cordial, un outil de référence pour une coopération réussie entre l'Agence et l'Hébergeur, dans l'esprit du mouvement [__devops__](http://fr.wikipedia.org/wiki/Devops).
 
@@ -64,7 +64,7 @@ L'accès SSH permet notamment le bon déploiement, via GIT ou rsync, des mises �
 
 La date et l'heure du serveur doivent être configurées sur le fuseau “Europe/Paris”
 
-Version et configuration d'Apache2, PHP et MySQL : La configuration de PHP doit se conformer en tout point aux pré-requis du CMS Drupal version 7.x, dernière version stable de la version 7, y compris tous les pré-requis optionnels. Pour cela, suivre les indications des URL suivantes, en retenant les solutions Linux, Apache2, PHP et MySQL :
+Version et configuration d'Apache2, PHP et MySQL : La configuration de PHP doit se conformer en tout point aux pré-requis du CMS Drupal version 7.x et 8.x, y compris tous les pré-requis optionnels. Pour cela, suivre les indications des URL suivantes, en retenant les solutions Linux, Apache2, PHP et MySQL :
 
 * [https://drupal.org/requirements](https://drupal.org/requirements)
 * [https://drupal.org/requirements/webserver](https://drupal.org/requirements/webserver)
@@ -229,7 +229,7 @@ Si l'hébergeur utilise Puppet pour provisionner l'environnement de production, 
 
 Les points ci-dessus sont soit un rappel des pré-requis serveur de Drupal proposé par l'éditeur de ce CMS, soit des éléments permettant le bon déploiement des livrables de l'Agence. L'Hébergeur/l'infogéreur reste le seul interlocuteur du Client pour la mise en place effective de ces pré-requis. Dans le cas ou cela a été prévu, l'Agence peut jouer un rôle d'Assistance à Maitrise d'Ouvrage auprès du client pour l'aider à valider que ces pré-requis ont bien été installés.
 
-En-dehors des points indiqués comme optionnels, tous ces points sont importants et peuvent devenir bloquants pour le succès du déploiement de l’application web basée sur le CMS Drupal 7.x ou 8.x. Sur ces points, l'Agence Les Polypodes demande a être prévenue dès qu'une incompréhension ou un doute survient du côté du Client ou de l'Hébergeur qui doit livrer l’hébergement et éventuellement assurer l’infogérance de l’application, et se tient prête à expliquer le détail et la raison de chaque pré-requis. 
+En-dehors des points indiqués comme optionnels, tous ces points sont importants et peuvent devenir bloquants pour le succès du déploiement de l’application web basée sur le CMS Drupal 7.x et 8.x. Sur ces points, l'Agence Les Polypodes demande a être prévenue dès qu'une incompréhension ou un doute survient du côté du Client ou de l'Hébergeur qui doit livrer l’hébergement et éventuellement assurer l’infogérance de l’application, et se tient prête à expliquer le détail et la raison de chaque pré-requis. 
 
 Il revient à l'Hébergeur de réaliser l'installation et la configuration des pré-requis de Drupal, et de s'assurer que ces pré-requis de Drupal ne mettent pas en cause l'intégrité, la disponibilité et la performances de l'infrastrucutre existante (en cas de ré-utilisation d'un serveur de production en particulier). 
 
