@@ -2,15 +2,10 @@
 
 # Prérequis pour la création de fichiers PSD en vue d’une intégration  HTML 5 / CSS 3 incluant des objectifs de responsive design.
 
-version 1.1
-
-Auteurs :
-
-* Samuel Frémondière (TOOG)
-* Gaëtan Ark (Les POLYPODES)
-* Ronan Guilloux (Les POLYPODES)
-
-Licence : http://creativecommons.org/licenses/by-sa/3.0/fr/ 
+* auteurs : [Samuel Frémondière](https://github.com/samcome) (TOOG) ([found here](https://github.com/toog/Collaboration)), [Gaëtan Ark](https://github.com/shinze) (Les POLYPODES), [Ronan Guilloux](https://github.com/ronanguilloux) (Les POLYPODES)
+* version : 1.1.0
+* licence : [CC by-sa 3.0 fr](http://creativecommons.org/licenses/by-sa/3.0/fr/)
+* [Ce document libre et ouvert est téléchargeable en ligne](https://github.com/polypodes/Collaborate/blob/master/Prerequis-pour-la-creation-de-PSD.md) ([version PDF](https://gitprint.com/polypodes/Collaborate/blob/master/Prerequis-pour-la-creation-de-PSD.md))
 
 ## Contexte
 
