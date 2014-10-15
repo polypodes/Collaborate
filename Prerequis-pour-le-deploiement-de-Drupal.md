@@ -106,6 +106,10 @@ root@server:/# cat php.ini | grep 'date.timezone'
 
 Attention à bien achever la *configuration* de certains modules de PHP pour l'environnement de production.
 
+### Mémoire allouée à PHP
+
+A titre d'information uniquement, les préconisations de mémoire limite allouable (directive `memory_limit` de `php.ini`) sont de (128M pour Drupal](https://www.drupal.org/requirements/php#memory) et de [`256M` pour Symfony2 (dont Drupal utilise des composants)](https://www.google.fr/?q=site:symfony.com+%22memory_limit%22#q=site:symfony.com+%22memory_limit%22).
+
 ### Caches d'OpCode et accélérateurs pour PHP
 
 Jusqu'à PHP 5.4.x inclus, l'Agence recommande d'ajouter un accélérateur permettant de gérer le cache d'OpCode pour PHP, en particulier [APC](http://php.net/manual/en/book.apc.php).
