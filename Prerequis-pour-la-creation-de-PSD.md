@@ -2,14 +2,14 @@
 
 # Prérequis pour la création de fichiers PSD en vue d’une intégration  HTML 5 / CSS 3 incluant des objectifs de responsive design.
 
-* auteurs : [Samuel Frémondière](https://github.com/samcome) (TOOG) ([found here](https://github.com/toog/Collaboration)), [Gaëtan Ark](https://github.com/shinze) (Les POLYPODES), [Ronan Guilloux](https://github.com/ronanguilloux) (Les POLYPODES)
+* auteurs : [Samuel Frémondière](https://github.com/samcome) (TOOG) ([found here](https://github.com/toog/Collaboration)), [Gaëtan Ark](https://github.com/shinze) ([Les Polypodes](http://lespolypodes.com/)), [Ronan Guilloux](https://github.com/ronanguilloux) ([Les Polypodes](http://lespolypodes.com/))
 * version : 1.1.0
 * licence : [CC by-sa 3.0 fr](http://creativecommons.org/licenses/by-sa/3.0/fr/)
 * [Ce document libre et ouvert est téléchargeable en ligne](https://github.com/polypodes/Collaborate/blob/master/Prerequis-pour-la-creation-de-PSD.md) ([version PDF](https://gitprint.com/polypodes/Collaborate/blob/master/Prerequis-pour-la-creation-de-PSD.md))
 
 ## Contexte
 
-Pour l'intégration HTML d'un nouveau site, LES POLYPODES utilise des frameworks HTML et CSS qui accélèrent et encadrent le travail d'intégration et la pérennité du projet.
+Pour l'intégration HTML d'un nouveau site, L'agence [Les Polypodes](http://lespolypodes.com/) utilise des frameworks HTML et CSS qui accélèrent et encadrent le travail d'intégration et la pérennité du projet.
 
 Notre framework HTML / CSS est actuellement Twitter Bootstrap version 3. C’est un projet communautaire robuste, fiable et qui est pour l'instant un standard de facto. 
 
@@ -47,7 +47,7 @@ Variantes possibles : 1170px est la largeur utilisée par LES POLYPODES, 980px e
 
 ## 3. Organisation interne du PSD
 
-LES POLYPODES attend un seul fichier PSD organisé en dossiers et en calques, utilisable par l'intégrateur HTML. Cela implique les points suivants :
+L'agence [Les Polypodes](http://lespolypodes.com/) attend un seul fichier PSD organisé en dossiers et en calques, utilisable par l'intégrateur HTML. Cela implique les points suivants :
 
 1. Organiser impérativement les calques en dossier : header / content / footer
 2.	Pour chaque élément (liens, boutons, mégamenu, etc.), lorsqu'il possède plusieurs états (ex : bouton enfoncé ou non) : fournir chaque état dans une structure de calques organisés : chaque état est proposé séparément.
@@ -57,10 +57,10 @@ LES POLYPODES attend un seul fichier PSD organisé en dossiers et en calques, ut
 
 Tous ces points sont importants et peuvent devenir bloquants.
 
-Sur ces points, LES POLYPODES demande a être prévenus dès qu'une incompréhension ou un doute survient du côté de l'Agence Créative qui doit livrer le PSD, et se tient prête à expliquer le détail et la raison de chaque pré-requis. 
+Sur ces points, l'agence [Les Polypodes](http://lespolypodes.com/) demande a être prévenus dès qu'une incompréhension ou un doute survient du côté de l'Agence Créative qui doit livrer le PSD, et se tient prête à expliquer le détail et la raison de chaque pré-requis. 
 
-Il revient au Client Final de créer les conditions et les occasions de dialogues entre l’Agence Créative réalisant le PSD et LES POLYPODES réalisant l'intégration pour la bonne conduite du projet. 
+Il revient au Client Final de créer les conditions et les occasions de dialogues entre l’Agence Créative réalisant le PSD et l'agence [Les Polypodes](http://lespolypodes.com/) réalisant l'intégration pour la bonne conduite du projet. 
 
-LES POLYPODES se tient prêt à planifier des jours de conseils et d'assistance à maîtrise d'ouvrage pour aider le Client Final dans la conduite de ce projet, sur la base d'un forfait de régie de XXX € jour / homme, frais de transport non inclus.
+L'agence [Les Polypodes](http://lespolypodes.com/) se tient prêt à planifier des jours de conseils et d'assistance à maîtrise d'ouvrage pour aider le Client Final dans la conduite de ce projet, sur la base d'un forfait de régie de XXX € jour / homme, frais de transport non inclus.
 
 
