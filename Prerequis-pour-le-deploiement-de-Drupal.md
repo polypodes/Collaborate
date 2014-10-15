@@ -5,21 +5,21 @@
 Éléments non exhaustifs ; configuration définitive laissée à l’appréciation de l’Hébergeur
 
 * version : 1.5.1
-* auteurs : [Ronan Guilloux](mailto:ronan@lespolypodes.com), Les Polypodes SARL (Nantes, France)
+* auteurs : [Ronan Guilloux](mailto:ronan@lespolypodes.com), [Les Polypodes](http://lespolypodes.com/) SARL (Nantes, France)
 * licence : [CC by-sa 3.0 fr](http://creativecommons.org/licenses/by-sa/3.0/fr/)
 * [Ce document libre et ouvert est téléchargeable en ligne](https://github.com/polypodes/Collaborate/blob/master/Prerequis-pour-le-deploiement-de-Drupal.md)
 
 
 ## 1. But
 
-Pour l’hébergement de sites web ou d’applications web basées sur le CMS Drupal version 7.x et 8.x, l'agence Les Polypodes propose un document non exhaustif de pré-requis techniques, à l’intention de l’Hébergeur retenu par le Client.
+Pour l’hébergement de sites web ou d’applications web basées sur le CMS Drupal version 7.x et 8.x, l'agence [Les Polypodes](http://lespolypodes.com/) propose un document non exhaustif de pré-requis techniques, à l’intention de l’Hébergeur retenu par le Client.
 
 Ce document se veut une base de dialogue cordial, un outil de référence pour une coopération réussie entre l'Agence et l'Hébergeur, dans l'esprit du mouvement [__devops__](http://fr.wikipedia.org/wiki/Devops).
 
 
 ## 2. Rôles et vocabulaire 
 
-* L'Agence Les Polypodes est l’agence qui conçoit l’application web, et qui le cas échéant la déploie et/ou en assure la maintenance ;
+* L'Agence [Les Polypodes](http://lespolypodes.com/) est l’agence qui conçoit l’application web, et qui le cas échéant la déploie et/ou en assure la maintenance ;
 * l’Hébergeur/Infogéreur est responsable de l’hébergement et/ou de l’infogérance : il assure la sécurité, de la mise à jour et de la surveillance des logiciels serveurs : la pile LAMP (OS GNU/Linux, PHP, Apache2, MySQL), et tous les autres logiciels nécessaires installés sur le serveur. Sauf indications contraires, il n'assure pas l'infogérance de l'application web ;
 * le Client final est l'entité qui réalise la commande et la recette de l’application et de son hébergement.
 
