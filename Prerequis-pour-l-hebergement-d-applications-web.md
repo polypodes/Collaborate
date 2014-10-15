@@ -112,6 +112,11 @@ Jusqu'à PHP 5.4.x inclus, l'Agence recommande d'ajouter un accélérateur perme
 
 À partir de PHP 5.5.x, PHP intègre son propre moteur de cache d'Opcode, [Zend Opcache](http://en.wikipedia.org/wiki/List_of_PHP_accelerators#Zend_Opcache_.28ex._Zend_Optimizer.2B.29). Dès lors, il n'est pas requis d'installer un autre accélérateur.
 
+### Mémoire allouée à PHP
+
+A titre d'information uniquement, les préconisations de mémoire limite allouable (directive `memory_limit` de `php.ini`) sont de [`256M` pour Symfony2 (quand il est déployé sur MS Azure)](https://www.google.fr/?q=site:symfony.com+%22memory_limit%22#q=site:symfony.com+%22memory_limit%22).
+
+
 ### Sécurité et mise à jour des logiciels côté serveur
 
 A titre d'information, pour évaluer la présence de vulnérabilités critiques éventuelle dans la version de PHP installée, l'Agence utilise [versionscan](https://github.com/psecio/versionscan).
