@@ -49,13 +49,13 @@ L'Agence demande
 - l'accès à un shell fonctionnel : `bash`, ou idéalement `zsh`.
 - il est utile que cet utilisateur appartiennt au `usergroup` utilisé par Apache2 (`:www-data`)
 
-Le répertoire d'hébergement du site web à déployer (par exemple /var/www/NomDuProjet/[RacineDuSiteWeb]) devra être accessible en écriture pour l'utilisateur linux `polypodes`. Suggestion: `chown www-data:www-data` + `chmod 775`, l'utilisateur linux polypodes étant déjà membre du groupe `:www-data`.
+Le répertoire d'hébergement du site web à déployer (par exemple `/var/www/NomDuProjet/[RacineDuSiteWeb]`) devra être accessible en écriture pour l'utilisateur linux `polypodes`. Suggestion: `chown www-data:www-data` + `chmod 775`, l'utilisateur linux polypodes étant déjà membre du groupe `:www-data`.
 
 L'accès SSH permet notamment le bon déploiement, via GIT ou rsync, des mises à jours et évolutions du site, et est rendu obligatoire par l'utilisation en ligne de commande d'outils de build (make, grunt, gulp, drush, etc.).
 
 ## 6. Préparation des déploiements successifs (releases majeures, correctifs, etc.)
 
-Le process de mise en (pre-)production de l'Agence se base sur une structure en `releases`, avec un `DocRoot` d'Apache2 pointant vers la dernière release courante, via un mécanisme de liens symbolique :
+Le process de mise en (pre-)production de l'Agence se base sur une structure en `releases`, avec un `DocRoot` d'Apache2 pointant vers la **dernière release courante**, via un mécanisme de liens symbolique :
 
 ```bash
 ➜  myServer  tree
@@ -68,7 +68,24 @@ Le process de mise en (pre-)production de l'Agence se base sur une structure en 
 ➜  myServer
 ```
 
-Ce mécanisme de mise en (pre-)production basé sur des releases est courant (cf. [Capistrano](http://capistranorb.com) par exemple) - il est [présenté en détail ici](https://github.com/polypodes/Build-and-Deploy/tree/master/deploy)
+Ce mécanisme de mise en (pre-)production basé sur des **releases** est courant (cf. [Capistrano](http://capistranorb.com) par exemple) - il est [présenté en détail ici](https://github.com/polypodes/Build-and-Deploy/tree/master/deploy) :
+
+```bash
+➜  myServer  tree releases
+.
+└── [me            170]  releases
+    ├── [me            340]  2014-07-01--11-10-50                <-- "old"
+    ├── [me            340]  2014-06-21--13-21-27
+    ├── [me            340]  2014-05-13--18-34-42
+    ├── [me            340]  2014-05-02--14-25-51
+    └── [me            340]  2014-07-04--16-23-10                <-- "current"
+        ├── [me            68]  src
+        └── [me           136]  web
+            └── [me          1289]  index.php
+            └── [me            16]  uploads -> ../../../uploads  <-- a symlink
+            
+➜  myServer
+````
 
 Du point de vue de l'hébegement, se mécanisme nécessite simplement que le `DocRoot` du vhost d'Apache2 soit connu de l'Agence, et que la directive `Options FollowSymLinks` y soit présente. 
 
