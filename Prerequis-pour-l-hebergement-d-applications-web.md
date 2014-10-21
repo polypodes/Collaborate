@@ -68,6 +68,11 @@ Le process de mise en (pre-)production de l'Agence se base sur une structure en 
 ➜  myServer
 ```
 
+- `current` est le `DocumentRoot` du *virtualhost* dans Apache2
+- `old` est une release précédente, sur lequel on peut faire un *rollback*
+- `releases` est le répertoire contenant toutes les *releases*
+- `uploads` est un répertoire partagé entre toutes les *releases*, contenant les fichiers et médias envoyés par le webmaster sur le serveur (images, sons, vidéos, PDFs, etc.). Un lien symbolique rend disponible ce répertoire dans le dossier de chaque *release*.
+
 Ce mécanisme de mise en (pre-)production basé sur des **releases** est courant (cf. [Capistrano](http://capistranorb.com) ou [Chef](https://docs.getchef.com/resource_deploy.html) par exemple) - il est [présenté en détail ici](https://github.com/polypodes/Build-and-Deploy/tree/master/deploy) :
 
 ```bash
