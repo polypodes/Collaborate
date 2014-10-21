@@ -187,7 +187,24 @@ Le process de mise en (pré-)production de l'Agence se base sur une structure en
 - `releases` est le répertoire contenant toutes les *releases*
 - `uploads` est un répertoire partagé entre toutes les *releases*, contenant les fichiers et médias envoyés par le webmaster sur le serveur (images, sons, vidéos, PDFs, etc.). Un lien symbolique rend disponible ce répertoire dans le dossier de chaque *release*.
 
-Ce mécanisme de mise en (pré-)production basé sur des *releases* est courant (cf. [Capistrano](http://capistranorb.com) par exemple) - il est [présenté en détail ici](https://github.com/polypodes/Build-and-Deploy/tree/master/deploy)
+Ce mécanisme de mise en (pre-)production basé sur des **releases** est courant (cf. [Capistrano](http://capistranorb.com) ou [Chef](https://docs.getchef.com/resource_deploy.html) par exemple) - il est [présenté en détail ici](https://github.com/polypodes/Build-and-Deploy/tree/master/deploy) :
+
+```bash
+➜  myServer  tree releases
+.
+└── [me            170]  releases
+    ├── [me            340]  2014-07-01--11-10-50                <-- "old"
+    ├── [me            340]  2014-06-21--13-21-27
+    ├── [me            340]  2014-05-13--18-34-42
+    ├── [me            340]  2014-05-02--14-25-51
+    └── [me            340]  2014-07-04--16-23-10                <-- "current"
+        ├── [me            68]  src
+        └── [me           136]  web
+            └── [me          1289]  index.php
+            └── [me            16]  uploads -> ../../../uploads  <-- a symlink
+            
+➜  myServer
+```
 
 Du point de vue de l'hébergement, se mécanisme nécessite simplement que le dossier parent du `DocumentRoot` du *vhost* d'Apache2 soit accessible en écriture pour l'Agence, et que la directive `Options FollowSymLinks` y soit présente. 
 
