@@ -68,7 +68,7 @@ Le process de mise en (pre-)production de l'Agence se base sur une structure en 
 ➜  myServer
 ```
 
-Ce mécanisme de mise en (pre-)production basé sur des **releases** est courant (cf. [Capistrano](http://capistranorb.com) par exemple) - il est [présenté en détail ici](https://github.com/polypodes/Build-and-Deploy/tree/master/deploy) :
+Ce mécanisme de mise en (pre-)production basé sur des **releases** est courant (cf. [Capistrano](http://capistranorb.com) ou [Chef](https://docs.getchef.com/resource_deploy.html) par exemple) - il est [présenté en détail ici](https://github.com/polypodes/Build-and-Deploy/tree/master/deploy) :
 
 ```bash
 ➜  myServer  tree releases
