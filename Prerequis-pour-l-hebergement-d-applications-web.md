@@ -85,7 +85,7 @@ Ce mécanisme de mise en (pre-)production basé sur des **releases** est courant
             └── [me            16]  uploads -> ../../../uploads  <-- a symlink
             
 ➜  myServer
-````
+```
 
 Du point de vue de l'hébegement, se mécanisme nécessite simplement que le `DocRoot` du vhost d'Apache2 soit connu de l'Agence, et que la directive `Options FollowSymLinks` y soit présente. 
 
