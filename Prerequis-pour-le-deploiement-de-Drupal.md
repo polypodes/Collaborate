@@ -42,6 +42,7 @@ root@server:/# cat /etc/debian_version
 root@server:/# uname -a
 root@server:~# free -m
 root@server:~# grep 'model name' /proc/cpuinfo | wc -l
+root@server:~# df -h
 ```
 
 ## 4. Prérequis généraux liés aux rôles et droits Unix/Linux :
