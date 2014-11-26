@@ -43,6 +43,8 @@ root@server:/# uname -a
 root@server:~# free -m
 root@server:~# grep 'model name' /proc/cpuinfo | wc -l
 root@server:~# df -h
+root@server:~# ip link show
+root@server:~# netstat -i
 ```
 
 ## 4. Prérequis généraux liés aux rôles et droits Unix/Linux :
