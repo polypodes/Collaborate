@@ -27,7 +27,7 @@ Le but de ce document est de donner au Client toute l'information nécessaire su
 * l’Hébergeur/Infogéreur est responsable de l’hébergement et/ou de l’infogérance : il assure la sécurité, de la mise à jour et de la surveillance des logiciels serveurs : la pile LAMP (OS GNU/Linux, PHP, Apache2, MySQL), et tous les autres logiciels nécessaires installés sur le serveur. Sauf indications contraires, il n'assure pas l'infogérance de l'application web ;
 * le Client final est l'entité qui réalise la commande et la recette de l’application et de son hébergement.
 
-## 4. Elements à proposer et à faire préciser au prestataire d’hébergement / infogérance
+## 4. Éléments à proposer et à faire préciser au prestataire d’hébergement / infogérance
 
 Chacun des points suivants est directement lié à l’infrastructure nécessaire pour le fonctionnement des sites, et donne des garantie de continuité de service pour les utilisateurs des sites web, clients internautes et administrateurs :
 
@@ -39,12 +39,12 @@ Test de pings à envisager avec le prestataire pour valider que les applicatifs 
 - Quelles garanties de type “Garantie du Temps de Rétablissement” (GTR), et “Garantie du Temps d’Intervention” (GTI), sur quels horaires et dans quels délais
 - Quels garanties sur les mises à jour de sécurité des logiciels serveurs (serveur SSH, serveur FTP, et toute la pile LAMP)
 - Quels délais avant ces interventions de mises à jour de sécurité et quel mode de mise en maintenance des sites web durant ces phases de mise à jour de sécurité. Quel scénario et quels mode de communication ?
-- Quel niveau de Service infogérance permettrait d’installer de nouveaux paquets nécessaires 
+- Quel niveau de Service infogérance permettrait d’installer de nouveaux paquets nécessaires
 - Quelles garanties sur la configuration de la sécurité sur ce serveur (configuration et sécurité d’Apache2, Nginx, MySQL, PHP, mais aussi fail2ban, iptables, sshd_config, etc.)
 - Quelle autonomie ou que mode opératoire pour l’Agence responsable de la maintenance applicative, lorsqu’elle a besoin des opérations suivantes : créer un nouveau vhost, une nouvelle base de donnée, consulter les logs d’accès et d’erreurs d’Apache et de Nginx
 - Quelle fréquence des snapshot du serveur
 - Quelle procédure et quelle garanties sont donnée sur le temps de rétablissement, lorsque le responsable des sites web demande l’utilisation d’un snapshot
-- Hors snapshot serveur, quels sont les garanties sur la sauvegarde journalière, le quota de ces sauvegardes et la surée de rétention
+- Hors snapshot serveur, quels sont les garanties sur la sauvegarde journalière, le quota de ces sauvegardes et la durée de rétention
 - Quel est le scénario proposé par le prestataire au sujet de l’utilisation des snapshots serveur ou l’utilisation des sauvegardes des applications et bases de données.
 
 
@@ -52,7 +52,7 @@ Test de pings à envisager avec le prestataire pour valider que les applicatifs 
 
 A la lumière des réponses qui lui sont apportées, il revient au Client Final de détailler à l'Hébergeur/Infogéreur les exigences et les attentes qui n'auraient pas encore été satisfaites.
 
-Il revient au Client Final de créer les conditions et les occasions de dialogues entre l’hébergeur et l'Agence pour la bonne conduite et le succès du projet. 
+Il revient au Client Final de créer les conditions et les occasions de dialogues entre l’hébergeur et l'Agence pour la bonne conduite et le succès du projet.
 
 L'Agence Les Polypodes se tient prêt à planifier des jours supplémentaires de conseils et d'assistance à maîtrise d'ouvrage pour aider le Client Final dans la conduite de ce projet, sur la base d'une prestation de régie de XXX € jour / homme, frais de déplacement non inclus.
 

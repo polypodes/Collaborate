@@ -11,6 +11,7 @@ Le but principal de ce document est de mettre en place un environnement serveur 
 
 * [Prérequis pour l’hébergement d’applications web](Prerequis-pour-l-hebergement-d-applications-web.md) modernes basées sur PHP (Symfony2, etc.)
 * [Prérequis pour l’hébergement et de déploiement de Drupal](Prerequis-pour-le-deploiement-de-Drupal.md) spécifiquement
+* [Audit de service pour l'infogérance d’applications web basées sur LAMP](Audit-de-service-pour-l-infogerance-d-application-web.md) : Permet de faire le point sur les garanties de services proposées par ub hébergeur / infogéreur.
 
 ### A l'intention de votre Directeur Artistique / Agence Créative
 
