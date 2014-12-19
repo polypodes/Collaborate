@@ -30,24 +30,24 @@ Le but de ce document est de donner les éléments minimaux pour l'hébergement 
 
 ## 4. Prérequis généraux liés à l'OS : 
 
-* OS Linux, dernière version stable (LTS optionnel, pas formellement demandée). Préférence de l'équipe pour Debian ou Ubuntu, nous laissons l’Hébergeur juger de la meilleure distribution à utiliser. GNU/Linux Ubuntu 14.04 64 bits LTS est un choix idéal.
-* Dual Core *minimum* + 4 Giga RAM *minimum*
-* architecture 64 bits
-* un accès SSH avec un compte utilisateur Unix/Linux (cf. plus loin)
-* une stack LAMP tel que décrite ci-dessous
+* OS Linux, dernière version stable (LTS optionnel, pas formellement demandée). Préférence de l'équipe pour GNU/Linux Debian ou Ubuntu LTS dans leurs dernières version stables ;
+* Dual Core *minimum* + 4 Giga RAM *minimum* ;
+* architecture 64 bits ;
+* un accès SSH avec un compte utilisateur Unix/Linux (cf. plus loin) ;
+* une stack LAMP tel que décrite ci-dessous.
 
 ## 5. Prérequis généraux liés aux rôles et droits Unix/Linux :
 
 Dans l'utilisation des accès SSH au serveur web, le comptes utilisateur Linux utilisé par l'Agence Les Polypodes n'a pas besoin d'être `sudoer`, à partir du moment où un sysadmin est responsable de la maintenance et du monitoring de ce serveur.
 
 L'Agence demande 
-- un accès linux avec un compte `polypodes`
-- des droits suffisant pour éditer une crontab, 
-- des droits suffisant pour écrire dans un répertoire dédié au projet.
-- des droits suffisant pour lire le log Apache2 du site web (accès et erreurs)
+- un accès linux avec un compte `polypodes` ;
+- des droits suffisant pour éditer une crontab ;
+- des droits suffisant pour écrire dans un répertoire dédié au projet ;
+- des droits suffisant pour lire le log Apache2 du site web (accès et erreurs) ;
 - un répertoire `home` permettant de stocker la configuration de _dotfiles_ (`.bashrc`, `.bash_history`, etc.)
-- l'accès à un shell fonctionnel : `bash`, ou idéalement `zsh`.
-- il est utile que cet utilisateur appartiennt au `usergroup` utilisé par Apache2 (`:www-data`)
+- l'accès à un shell fonctionnel : `bash`, ou idéalement `zsh` ;
+- il est utile que cet utilisateur appartiennt au `usergroup` utilisé par Apache2 (`:www-data`).
 
 Le répertoire d'hébergement du site web à déployer (par exemple `/var/www/NomDuProjet/[RacineDuSiteWeb]`) devra être accessible en écriture pour l'utilisateur linux `polypodes`. Suggestion: `chown www-data:www-data` + `chmod 775`, l'utilisateur linux polypodes étant déjà membre du groupe `:www-data`.
 
@@ -68,9 +68,9 @@ Le process de mise en (pre-)production de l'Agence se base sur une structure en 
 ➜  myServer
 ```
 
-- `current` est le `DocumentRoot` du *virtualhost* dans Apache2
-- `old` est une release précédente, sur lequel on peut faire un *rollback*
-- `releases` est le répertoire contenant toutes les *releases*
+- `current` est le `DocumentRoot` du *virtualhost* dans Apache2 ;
+- `old` est une release précédente, sur lequel on peut faire un *rollback* ;
+- `releases` est le répertoire contenant toutes les *releases* ;
 - `uploads` est un répertoire partagé entre toutes les *releases*, contenant les fichiers et médias envoyés par le webmaster sur le serveur (images, sons, vidéos, PDFs, etc.). Un lien symbolique rend disponible ce répertoire dans le dossier de chaque *release*.
 
 Ce mécanisme de mise en (pre-)production basé sur des **releases** est courant (cf. [Capistrano](http://capistranorb.com) ou [Chef](https://docs.getchef.com/resource_deploy.html) par exemple) - il est [présenté en détail ici](https://github.com/polypodes/Build-and-Deploy/tree/master/deploy) :
@@ -208,9 +208,9 @@ Applications à installer :
 
 Livrables obligatoires attendues par l'Agence :
 
-* Accès SSH, URL de Phpmyadmin, et leurs différents identifiants d'accès
-* URL de pré-production
-* URL de production
+* accès SSH, URL de Phpmyadmin, et leurs différents identifiants d'accès ;
+* URL de pré-production ;
+* URL de production.
 
 Livrable optionnels :
 
