@@ -108,6 +108,19 @@ php5-mcrypt php5-memcache
 php5-ps php5-intl php5-mcrypt
 ```
 
+Le mode PHP d'Apache2 devrait être installé via le paquet `libapache2-mod-php5` afin qu'il contienne les [extensions essentielles incorporées dans ce package](https://packages.debian.org/fr/wheezy/libapache2-mod-php5), requises pour les livrables de l'Agence :
+
+```
+bcmath, bz2, calendar, Core, ctype,
+date, dba, dom, ereg, exif, fileinfo,
+filter, ftp, gettext, hash, iconv, json,
+libxml, mbstring, mhash, openssl, pcre,
+Phar, posix, Reflection, session, shmop,
+SimpleXML, soap, sockets, SPL, standard,
+sysvmsg, sysvsem, sysvshm, tokenizer,
+wddx, xml, xmlreader, xmlwriter, zip, zlib
+```
+
 Configuration complémentaire de PHP : (pour *apache2* et pour *cli*)
 
 ```
