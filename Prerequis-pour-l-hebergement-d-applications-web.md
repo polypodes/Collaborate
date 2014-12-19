@@ -94,9 +94,24 @@ Ce mécanisme de mise en (pre-)production basé sur des **releases** est courant
 
 Du point de vue de l'hébegement, se mécanisme nécessite simplement que le `DocRoot` du vhost d'Apache2 soit connu de l'Agence, et que la directive `Options FollowSymLinks` y soit présente. 
 
-## 7. PHP
+## 7. Apache2 
 
-PHP 5, dernière version stable, versions apache2 et cli
+
+Les livrables attendus par l'Agence comportent un vhost par environnement (preproduction et production), avec si possible la directive `AllowOverride All`. Apache2 doit être capable de gérér les liens symboliques et permettre l'utilisation des fichiers `.htacess`.
+
+Mods d'Apache à activer :
+
+```
+rewrite
+headers
+deflate
+expires
+setenvif
+```
+
+## 8. PHP
+
+PHP 5, dernière version stable, versions cgi (Apache2) et cli
 
 Extensions de PHP à installer :
 
@@ -108,7 +123,7 @@ php5-mcrypt php5-memcache
 php5-ps php5-intl php5-mcrypt
 ```
 
-Le mode PHP d'Apache2 devrait être installé via le paquet `libapache2-mod-php5` afin qu'il contienne les [extensions essentielles incorporées dans ce package](https://packages.debian.org/fr/wheezy/libapache2-mod-php5), requises pour les livrables de l'Agence :
+De plus, le mode PHP d'Apache2 devrait être installé prioritairement via le paquet `libapache2-mod-php5` de manière à ce qu'il contienne les [extensions incorporées dans ce package](https://packages.debian.org/fr/wheezy/libapache2-mod-php5), requises :
 
 ```
 bcmath, bz2, calendar, Core, ctype,
@@ -136,10 +151,9 @@ detect_unicode = Off
 
 La configuration de PHP doit se conformer aux pré-requis du framework Symfony 2.x (dernière version stable) : http://symfony.com/doc/current/reference/requirements.html, y compris tous les pré-requis optionnels.
 
-
 “Some systems don't support chmod +a, but do support another utility calledsetfacl. You may need to enable ACL support on your partition and install setfacl before using it (as is the case with Ubuntu)”
 
-Attention à bien achever la *configuration* de certains modules de PHP pour l'environnement de production.
+Attention à bien achever la *configuration* des modules de PHP pour un environnement de production.
 
 ### Caches d'OpCode et accélérateurs pour PHP
 
@@ -156,7 +170,7 @@ A titre d'information uniquement, les préconisations de mémoire limite allouab
 
 A titre d'information, pour évaluer la présence de vulnérabilités critiques éventuelle dans la version de PHP installée, l'Agence utilise [versionscan](https://github.com/psecio/versionscan) et [iniscan](https://github.com/psecio/iniscan).
 
-## 8. MySQL
+## 9. MySQL
 
 L'Hébergeur est responsable de la backup des bases de données et de la bonne configuration des ressources allouées à MySQL.
 
@@ -166,21 +180,6 @@ L'Hébergeur est responsable de la backup des bases de données et de la bonne c
 ```SQL
 SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, 
 INDEX, ALTER, CREATE TEMPORARY TABLES, LOCK TABLES
-```
-
-## 9. Apache2 
-
-
-Créer un vhost par environnement (preproduction et production), avec si possible la directive `AllowOverride All`. Apache2 doit être capable de gérér les liens symboliques et permettre l'utilisation des fichiers `.htacess`.
-
-Mods d'Apache à activer :
-
-```
-rewrite
-headers
-deflate
-expires
-setenvif
 ```
 
 ## 10. Logiciels utiles au bon déploiement
