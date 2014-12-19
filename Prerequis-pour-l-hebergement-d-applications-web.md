@@ -157,7 +157,8 @@ INDEX, ALTER, CREATE TEMPORARY TABLES, LOCK TABLES
 
 ## 9. Apache2 
 
-Créer un vhost par environnement (preproduction et production), avec la directive `AllowOverride All`
+
+Créer un vhost par environnement (preproduction et production), avec si possible la directive `AllowOverride All`. Apache2 doit être capable de gérér les liens symboliques et permettre l'utilisation des fichiers `.htacess`.
 
 Mods d'Apache à activer :
 
