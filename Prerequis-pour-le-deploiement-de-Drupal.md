@@ -4,7 +4,7 @@
 
 Éléments non exhaustifs ; configuration définitive laissée à l’appréciation de l’Hébergeur
 
-* version : 1.5.2
+* version : 1.5.3
 * auteurs : [Ronan Guilloux](mailto:ronan@lespolypodes.com), [Les Polypodes](http://lespolypodes.com/) SARL (Nantes, France)
 * licence : [CC by-sa 3.0 fr](http://creativecommons.org/licenses/by-sa/3.0/fr/)
 * [Ce document libre et ouvert est téléchargeable en ligne](https://github.com/polypodes/Collaborate/blob/master/Prerequis-pour-le-deploiement-de-Drupal.md)
@@ -27,7 +27,7 @@ Ce document se veut une base de dialogue cordial, un outil de référence pour u
 
 * OS Linux, dernière version stable (LTS optionnel, pas formellement demandée).
 * Distribution Debian ou Ubuntu - nous laissons l’Hébergeur juger de la meilleure distribution à utiliser et consulter les pré-requis de Drupal ci-dessous.
-* Dual Core *minimum* + 8 Giga RAM *minimum*
+* 2 Giga RAM *minimum*
 * architecture 64 bits
 * 10 Giga d'espace disque (backup non compris)
 * une stack LAMP tel que décrite ci-dessous
