@@ -1,4 +1,5 @@
 #! /bin/bash
+
 #
 # checkDrupalHost.sh
 # Copyright (C) 2015 Ronan Guilloux <ronan.guilloux@gmail.com>
@@ -12,7 +13,24 @@ RESETC 		= $(shell tput sgr0)
 
 
 all: intro tasks conclude
-tasks : date php
+tasks : date php mysql apache utils
+
+help:
+	@echo
+	@echo "${GREEN}Makefile-based Drupal prerequisites check help message:${RESETC}"
+	@echo "Source, authors, copyright: https://github.com/polypodes/Collaborate"
+	@echo "\n${YELLOW}Common, global tasks:${RESETC}"
+	@echo "\tmake help\t\tshow this help message"
+	@echo "\tmake\t\t\tperform a global system check against Drupal requirements"
+	@echo "\n${YELLOW}Other tasks:${RESETC}"
+	@echo "\tmake date\t\tperform system date & timezone checks."
+	@echo "\tmake php\t\tperform php-related checks."
+	@echo "\tmake mysql\t\tperform mysql-related checks."
+	@echo "\tmake apache\t\tperform apache2-related checks."
+	@echo "\tmake utils\t\tperform utils tools-related checks: imagemagick, vim, curl, etc."
+	@echo "\n\tAll checks are read-only operations"
+	@echo
+
 
 intro:
 	@echo
@@ -20,7 +38,7 @@ intro:
 
 conclude:
 	@echo
-	@echo "Done."
+	@echo "${GREEN}Done.${RESETC}"
 	@echo
 
 date:
@@ -91,17 +109,40 @@ php:
 	@php -i | grep 'max_execution_time'
 	@echo
 	@echo "${YELLOW}APC installation guides sometimes recommend setting apc.include_once_override=1. Although this setting does not appear to affect Drupal 6, it causes Drupal 7 to fail ${RESETC}"
-	@php -i | grep 'max_execution_time'
+#	@php -i | grep 'apc' 
 	@echo
 	@echo "${YELLOW}Timezone must be set${RESETC}"
 	@php -i | grep 'date.timezone'
 	@echo
-	@echo "${YELLOW} ${RESETC}"
+
+mysql:
+	@echo "${YELLOW}MySQL:${RESETC}"
+	@mysql -V
 	@echo
 
+apache:
+	@echo "${YELLOW}Apache2:${RESETC}"
+	@apache2 -l
+	@apache2 -V
+	@apache2ctl -M
+	@apache2ctl -S
+	@echo
 
-.PHONY: intro conclude tasks
-.PHONY: date
+utils:
+	@echo "${YELLOW}CLI tools${RESETC}"
+	@which vim
+	@which git
+	@which rsync
+	@which curl
+	@which convert #ImageMagick
+	@which tig
+	@which tree
+	@which ack-grep
+	@which lynx
+
+
+.PHONY: intro conclude tasks help
+.PHONY: date php mysql apache utils
 
 
 
