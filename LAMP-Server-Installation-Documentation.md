@@ -21,7 +21,7 @@ THE SERVER.
 
 ## Meta
 
-- **version**: 0.9 - June 11th, 2014.
+- **version**: 1.0.0
 - **licence** : http://creativecommons.org/licenses/by-sa/3.0/fr/
 - **author**: Ronan GUILLOUX (<ronan@lespolypodes.com>), [Les Polypodes](http://lespolyodes.com)
 - [This free/open document is available online here](https://github.com/polypodes/Collaborate/blob/master/dev.server.installation.md)
@@ -141,16 +141,30 @@ Then for some unclear reasons, PhpMyAdmin asked later to install /activate `mcry
 sudo php5enmod mcrypt
 ```
 
-NodeJs
+[NodeJs](https://github.com/joyent/node/wiki/installing-node.js-via-package-manager#debian-and-ubuntu-based-linux-distributions)
+
+Setup with Ubuntu:
+```bash
+curl -sL https://deb.nodesource.com/setup | sudo bash -
+```
+
+Then install with Ubuntu:
 
 ```bash
-apt-get install python-software-properties 
-apt-get install python g++ make
-apt-get install software-properties-common
-add-apt-repository ppa:chris-lea/node.js
-apt-get update
-apt-get install nodejs
-npm cache clear
+sudo apt-get install -y nodejs
+```
+
+Setup with Debian (as root):
+
+```bash
+apt-get install curl
+curl -sL https://deb.nodesource.com/setup | bash -
+```
+
+Then install with Debian (as root):
+
+```bash
+apt-get install -y nodejs
 ```
 
 Other CLI-related tools
