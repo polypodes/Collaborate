@@ -18,8 +18,7 @@ Ce document se veut une base de dialogue cordial, un outil de référence pour u
 
 ## 2. But
 
-Le but de ce document est de donner au Client toute l'information nécessaire sur les garanties de services que lui donne son Infogéreur, et d'évaluer si ces garanties rencontrent bien les attentes du Client en terme de disponibilité de service et de réactivité.
-
+Le but de ce document est de donner au Client une information claire et complète sur les garanties de services que propose l'Infogéreur qu'il a retenu, et d'évaluer si ces garanties rencontrent bien les attentes du Client en terme de disponibilité de service et de réactivité.
 
 ## 3. Rôles et vocabulaire 
 
