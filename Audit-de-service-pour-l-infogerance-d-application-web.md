@@ -4,7 +4,7 @@
 
 *Résumé* : Ce document liste les pré-requis de l'Agence [Les Polypodes](http://lespolypodes.com/) pour évaluer une infogérance d'application Symfony2 sur un serveur web. Ces éléments sont non exhaustifs : la configuration définitive est laissée à l’appréciation du Client, à la lumière de ces propres exigences. Il reste le donneur d'ordre final.
 
-* version : 1.0.0
+* version : 1.0.1
 * auteurs : [Ronan Guilloux](mailto:ronan@lespolypodes.com), [Les Polypodes](http://lespolypodes.com/) SARL (Nantes, France)
 * licence : [CC by-sa 3.0 fr](http://creativecommons.org/licenses/by-sa/3.0/fr/)
 * [Ce document libre et ouvert est téléchargeable en ligne](https://github.com/polypodes/Collaborate)
@@ -74,7 +74,7 @@ Chacun des points suivants est directement lié à l’infrastructure nécessair
 - Les scénarios de rétablissement sur backups éventuellement proposés par l'Hébergeur font-il l'objet d'un test de crash (conditions réelles de production)
 - Quelle procédure et quelle garanties sont données par l'Hébergeur sur le temps de rétablissement, lorsque le Client demande l’utilisation d’un snapshot
 
-### Exemple de tableau descrivant les niveaux d'infogérance et d'alerte attendu :
+### Exemple de tableau décrivant les niveaux d'infogérance et d'alerte attendus :
 
 |Caractéristiques | NIVEAUX D'INFOGERANCE | NIVEAUX D'ALERTE 24/7|
 |---|:---:|:---:|
