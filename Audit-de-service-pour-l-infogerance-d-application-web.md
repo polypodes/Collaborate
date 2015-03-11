@@ -1,6 +1,6 @@
 ![#Les Polypodes](header.png)
 
-# Audit de service pour l'infogérance d’applications web basées sur LAMP
+# Audit de service pour l'infogérance d’applications web basées sur un serveur dédié
 
 *Résumé* : Ce document liste les pré-requis de l'Agence [Les Polypodes](http://lespolypodes.com/) pour évaluer une infogérance d'application Symfony2 sur un serveur web. Ces éléments sont non exhaustifs : la configuration définitive est laissée à l’appréciation du Client, à la lumière de ces propres exigences. Il reste le donneur d'ordre final.
 
@@ -47,7 +47,7 @@ Test de pings à envisager avec le prestataire pour valider que les applicatifs 
 - Hors snapshot serveur, quels sont les garanties sur la sauvegarde journalière, le quota de ces sauvegardes et la durée de rétention
 - Quel est le scénario proposé par le prestataire au sujet de l’utilisation des snapshots serveur ou l’utilisation des sauvegardes des applications et bases de données.
 
-### Exemple de tableau descrivant les niveaux d'infogérance et d'alert attendu :
+### Exemple de tableau descrivant les niveaux d'infogérance et d'alerte attendu :
 
 |Caractéristiques | NIVEAUX D'INFOGERANCE | NIVEAUX D'ALERTE 24/7|
 |---|:---:|:---:|
