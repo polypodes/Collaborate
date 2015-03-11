@@ -67,7 +67,8 @@ Test de pings à envisager avec le prestataire pour valider que les applicatifs 
 |Sorry service (isolation machine) | SI1 / SI2 / SI3 / SI4 |
 
 
-Prestations ponctuelles proposées facturées au temps passé :
+Prestations ponctuelles pouvant être proposées par l'Hébergeur :
+
 - Prestations / Gestes de proximité Datacenter
 - Mise à jour des patchs SYSTÈME MAJEUR
 - Mise à jour des patchs SYSTÈME MINEUR (SI 0)
@@ -79,13 +80,14 @@ Prestations ponctuelles proposées facturées au temps passé :
 
 (*: Restauration de sauvegarde : 30 mn offertes/mois/VM-SV physique)
 
-HO : Lundi au Vendredi : 9h00 12h30 / 14h00 18h00 (Hors jours fériés et week-end)
-HNO : Heures Non Ouvrées 24/7
-GTI : Garantie du Temps d'Intervention < 4 heures
+- HO : Lundi au Vendredi : 9h00 12h30 / 14h00 18h00 (Hors jours fériés et week-end)
+- HNO : Heures Non Ouvrées 24/7
+- GTI : Garantie du Temps d'Intervention < 4 heures
 
 ### Réponses à obtenir : 
 
 - Les niveaux de SA et de SI sont-ils bien accessibles sur Linux ?
+- les prestations d'intervention sont-elle facturées au temps passé ou bien sont-elles forfaitaires ?
 - Quel est le tarif (€ht/heure) des prestations d'intervention en HO ? en HNO ?
 - Quels sont les conditions et limite du service d'infogérance ? (ex: 1 heure par ticket d’1/4 d’heure d’infogérance /mois/service souscrit). Les tickets sont-ils cumulables (plusieurs questions simultanées possibles) ?
 
