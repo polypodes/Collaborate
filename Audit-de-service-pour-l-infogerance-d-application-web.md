@@ -4,7 +4,7 @@
 
 *Résumé* : Ce document liste les pré-requis de l'Agence [Les Polypodes](http://lespolypodes.com/) pour évaluer une infogérance d'application Symfony2 sur un serveur web. Ces éléments sont non exhaustifs : la configuration définitive est laissée à l’appréciation du Client, à la lumière de ces propres exigences. Il reste le donneur d'ordre final.
 
-* version : 0.9.1
+* version : 1.0.0
 * auteurs : [Ronan Guilloux](mailto:ronan@lespolypodes.com), [Les Polypodes](http://lespolypodes.com/) SARL (Nantes, France)
 * licence : [CC by-sa 3.0 fr](http://creativecommons.org/licenses/by-sa/3.0/fr/)
 * [Ce document libre et ouvert est téléchargeable en ligne](https://github.com/polypodes/Collaborate)
@@ -30,21 +30,49 @@ Le but de ce document est de donner au Client une information claire et complèt
 
 Chacun des points suivants est directement lié à l’infrastructure nécessaire pour le fonctionnement des sites, et donne des garantie de continuité de service pour les utilisateurs des sites web, clients internautes et administrateurs :
 
+### Garantie de service :
+
 - Où trouver le document descriptif des niveaux d'infogérance et niveaux d'alerte
+- Les niveaux de SA et de SI sont-ils bien accessibles sur Linux ?
+- les prestations d'intervention sont-elle facturées au temps passé ou bien sont-elles forfaitaires ?
+- Quel est le tarif (€ht/heure) des prestations d'intervention en HO ? en HNO ?
+- Quels sont les conditions et limite du service d'infogérance ? (ex: 1 heure par ticket d’1/4 d’heure d’infogérance /mois/service souscrit). Les tickets sont-ils cumulables (plusieurs questions simultanées possibles) ?
+
+### Livraison du serveur :
+
 - Quelles garanties et quels livrables concernant l’installation et la configuration initiale du serveur
+
+### Garantie d'infrastructure :
+
 - Quelles garanties et quels modes de test concernant le débit de connexions montantes et descendantes des interfaces réseaux
 - Quels niveau de supervision propose le prestataire, avec quelles garanties
-Test de pings à envisager avec le prestataire pour valider que les applicatifs clients (les sites web) sont en bonne état de marche : les URL http (port 80) des pages web des sites font appels à la base de donnée et à Apache2-Nginx, PHP et MySQL
 - Quelles garanties de type “Garantie du Temps de Rétablissement” (GTR), et “Garantie du Temps d’Intervention” (GTI), sur quels horaires et dans quels délais
-- Quels garanties sur les mises à jour de sécurité des logiciels serveurs (serveur SSH, serveur FTP, et toute la pile LAMP)
-- Quels délais avant ces interventions de mises à jour de sécurité et quel mode de mise en maintenance des sites web durant ces phases de mise à jour de sécurité. Quel scénario et quels mode de communication ?
+
+### Sécurité et garantie sur les mises à jour des logiciels serveurs
+- Quelle politique de mise à jour de sécurité et quels moyens se donne l'hébergeur
+- Quels délais avant ces interventions de mises à jour de sécurité 
+- Quel mode de mise en maintenance des sites web durant ces phases de mise à jour de sécurité
+- Quels scénarios et quels modes de communication auprès du Client pour annoncer /réaliser / conclure ces mises à jour de serveur
+
+### Maintenance courante
+
 - Quel niveau de Service infogérance permettrait d’installer de nouveaux paquets nécessaires
-- Quelles garanties sur la configuration de la sécurité sur ce serveur (configuration et sécurité d’Apache2, Nginx, MySQL, PHP, mais aussi fail2ban, iptables, sshd_config, etc.)
-- Quelle autonomie ou que mode opératoire pour l’Agence responsable de la maintenance applicative, lorsqu’elle a besoin des opérations suivantes : créer un nouveau vhost, une nouvelle base de donnée, consulter les logs d’accès et d’erreurs d’Apache et de Nginx
-- Quelle fréquence des snapshot du serveur
-- Quelle procédure et quelle garanties sont donnée sur le temps de rétablissement, lorsque le responsable des sites web demande l’utilisation d’un snapshot
-- Hors snapshot serveur, quels sont les garanties sur la sauvegarde journalière, le quota de ces sauvegardes et la durée de rétention
-- Quel est le scénario proposé par le prestataire au sujet de l’utilisation des snapshots serveur ou l’utilisation des sauvegardes des applications et bases de données.
+- Quelles garanties sur la configuration de la sécurité sur ce serveur : configuration et sécurité des serveurs web, de MySQL, de PHP, configuration firewall, banissement des IP indésirables, conditions d'accès SSH, etc.
+- Est-il possible de s'accorder sur un test de ping pour valider que les applicatifs clients (les sites web) sont en bonne état de marche ? ex : *plusieurs*  URLs http (port 80) vers des pages web des sites faisant appels à la base de donnée, à Apache2/Nginx, à PHP, à des services tiers, etc.
+
+### Facilité de dialogue entre l'Agence et l'Hébergeur
+
+- l'Agence a-t-elle la possibilité d'ouvrir elle-même des tickets de demande d'intervention auprès de l'Hébergeur
+- Quelle autonomie ou quel mode opératoire pour l’Agence responsable de la maintenance applicative, lorsqu’elle a besoin des opérations suivantes : créer un nouveau vhost, une nouvelle base de donnée, consulter les logs d’accès et d’erreurs d’Apache et/ou de Nginx
+
+### Garantie sur les sauvegardes
+
+- Quelle fréquence de snapshots serveur
+- Hors snapshot serveur, quels sont les autres modes de sauvegardes journalières éventuels, le quota de ces sauvegardes, la durée de rétention et les conditions de mise en oeuvre de ces sauvegardes
+- Quel est le plan de sauvegarde *et de rétablissement* proposé par l'hébergeur
+- Quel est le scénario proposé par le prestataire au sujet de l’utilisation des snapshots serveur ou l’utilisation des sauvegardes des applications et bases de données pour rétablir le service
+- Les scénarios de rétablissement sur backups éventuellement proposés par l'Hébergeur font-il l'objet d'un test de crash (conditions réelles de production)
+- Quelle procédure et quelle garanties sont données par l'Hébergeur sur le temps de rétablissement, lorsque le Client demande l’utilisation d’un snapshot
 
 ### Exemple de tableau descrivant les niveaux d'infogérance et d'alerte attendu :
 
@@ -83,14 +111,6 @@ Prestations ponctuelles pouvant être proposées par l'Hébergeur :
 - HO : Lundi au Vendredi : 9h00 12h30 / 14h00 18h00 (Hors jours fériés et week-end)
 - HNO : Heures Non Ouvrées 24/7
 - GTI : Garantie du Temps d'Intervention < 4 heures
-
-### Réponses à obtenir : 
-
-- Les niveaux de SA et de SI sont-ils bien accessibles sur Linux ?
-- les prestations d'intervention sont-elle facturées au temps passé ou bien sont-elles forfaitaires ?
-- Quel est le tarif (€ht/heure) des prestations d'intervention en HO ? en HNO ?
-- Quels sont les conditions et limite du service d'infogérance ? (ex: 1 heure par ticket d’1/4 d’heure d’infogérance /mois/service souscrit). Les tickets sont-ils cumulables (plusieurs questions simultanées possibles) ?
-
 
 ## 5. Limites, conseil et assistance
 
