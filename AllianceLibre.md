@@ -7,5 +7,5 @@ Ces deux dernières années, nous avons développé nos compétences en architec
 
 Sans être des fondamentalistes du Libre, nous contribuons volontiers à des projets libres et ouverts que nous distribuons sur https://github.com/polypodes. Nous participons ponctuellement à des initiatives de LiberTIC, NantesJS, GDG Nantes (DevFest) ou d’Atlantic 2.0 (Tech2Day). Nous travaillons sur des Machines du Diable (Mac OS X pour tout le monde à l’agence), mais pour éviter les trolls, nous n’en dirons pas plus...
 
-Certains d’entre nous connaissent l’écosystème et les acteurs d’Alliance Libre depuis longtemps, et nous nous sommes sûrement déjà croisés (Linux-Nantes , FirstJeudis, FOSDEM, etc.). Nous sommes ravis de vous rejoindre au sein d’Alliance Libre, et de collaborer avec vous !
+Certains d’entre nous connaissent l’écosystème et les acteurs d’Alliance Libre depuis longtemps, et nous nous sommes sûrement déjà croisés (Linux-Nantes, FirstJeudis, FOSDEM, etc.). Nous sommes ravis de vous rejoindre au sein d’Alliance Libre, et de collaborer avec vous !
  
