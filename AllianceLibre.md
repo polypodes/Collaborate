@@ -2,7 +2,7 @@ Depuis 2005, L’agence de création interactive «Les Polypodes» élabore et p
 
 Notre équipe de huit personnes peut prendre en charge un projet dès sa phase d’étude par du conseil, de la préconisation technique et de l’accompagnement jusqu’à sa mise en production avec nos compétences techniques, graphiques, d’ergonomie, d’accessibilité, de webmarketing et de référencement.
 
-Des outils et des méthodes de production maintenant devenus des standards (Grunt, Gulp… ), nous adorons le front-end depuis toujours !
+Nous adorons le front-end depuis toujours et utilisont des outils et des méthodes de production maintenant devenus des standards (Grunt, Gulp… ).
 
 Ces deux dernières années, nous avons développé nos compétences en architecture logicielle : Les API REST avec Symfony2 et les frameworks comme AngularJS ou React, en plus de Drupal. Les évolutions actuelles des standards du web (Web Components, CSS3, ES6) nous enthousiasment !
 
