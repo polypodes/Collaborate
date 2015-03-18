@@ -1,6 +1,10 @@
-Depuis 2005, l’agence de création interactive «Les Polypodes» élabore et produit des dispositifs de communication numériques ergonomiques et accessibles : sites web, bornes interactives, applications nomades pour tablettes et smartphones. Nous sommes aujourd’hui une équipe de 8 personnes;  nous réalisons nos projets de l’étude à la livraison, tant pour les aspects techniques, graphiques et webmarketing. Nos clients sont des collectivités locales, des PME de la région Pays de la Loire, et des grands comptes français. Par défaut et autant que nous le pouvons, nous livrons du code en licence libre. 
+Depuis 2005, l’agence de création interactive «Les Polypodes» élabore et produit des dispositifs de communication numériques ergonomiques et accessibles : sites web, bornes interactives, applications nomades pour tablettes et smartphones.
+
+Nous sommes aujourd’hui une équipe de 8 personnes;  nous réalisons nos projets de l’étude à la livraison, tant pour les aspects techniques, graphiques et webmarketing. Nos clients sont des collectivités locales, des PME de la région Pays de la Loire, et des grands comptes français. Par défaut et autant que nous le pouvons, nous livrons du code en licence libre. 
 
 Historiquement, le webdesign, l’accessibilité et l’ergonomie sont les grandes compétences de l’agence : Pour nos clients nous réalisons des préconisations techniques, ergonomiques, graphiques et des prestations de webmarketing. Nous faisons également du conseil et de l’accompagnement pour les clients encore en phase de réflexion sur leurs projets, ou des prestations d’optimisation du référencement pour des projets déjà existants.
+
+Les Polypodes ont depuis des années adopté des méthodes de production devenues maintenant des standards du métier avec l’utilisation des pré-post-processeurs CSS et l’adoption d’outils tels que Gulp, Grunt. Nous adorons le front-end !
 
 Ces deux dernières années, nous avons développé nos compétences en architecture logicielle pour le web : Les API REST avec Symfony2 et les frameworks comme AngularJs ou React, en plus de Drupal. Les évolutions actuelles des standards du web (Web Components, CSS3, ES6) nous enthousiasment !
 
