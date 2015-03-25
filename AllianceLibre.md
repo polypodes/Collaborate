@@ -1,4 +1,4 @@
-Depuis 2005, L’agence de création interactive «Les Polypodes» élabore et produit des dispositifs de communication numérique (sites web, bornes interactives, applications nomades tablettes et smartphones) pour des collectivités locales, des PME, la région des Pays de la Loire et de grands comptes français.
+Depuis 2005, L’agence de création interactive «Les Polypodes» élabore et produit des dispositifs de communication numérique pour des collectivités locales, des PME, la région des Pays de la Loire et de grands comptes français : sites web, bornes interactives, applications pour tablettes et smartphones.
 
 Notre équipe de huit personnes peut prendre en charge un projet dès sa phase d’étude par du conseil, de la préconisation technique et de l’accompagnement jusqu’à sa mise en production avec nos compétences techniques, graphiques, d’ergonomie, d’accessibilité, de webmarketing et de référencement.
 
