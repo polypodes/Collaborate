@@ -37,10 +37,10 @@ Vous arrivez alors sur un écran vous présentant les dernières annonces et une
 
 Une barre de navigation située en haut vous permet d’accéder à *Accueil, Ma page, Projets et Aide*.
 
-**Accueil** : La page d’accueil de Redmine (la page courante)
-**Ma page** : Une page listant plusieurs infos vous concernant
-**Projets** : La liste de vos projets
-**Aide** : Un lien vers la documentation officielle de Redmine en Anglais.
+* **Accueil** : La page d’accueil de Redmine (la page courante)
+* **Ma page** : Une page listant plusieurs infos vous concernant
+* **Projets** : La liste de vos projets
+* **Aide** : Un lien vers la documentation officielle de Redmine en Anglais.
 
 ### 3. Page *Ma page*
 
@@ -123,11 +123,11 @@ Les éléments essentiels à comprendre de cet écran :
 * **Fichiers**, permet d’attacher des documents à la demande.
 
 
-
+***
 
 ## FAQ
 
-**Qu’est-ce qu’une demande** ?
+**Qu’est-ce qu’une demande ?**
 
 Dans l’idéal une demande désigne une tâche à effectuer et devrait commencer par un verbe évoquant cette action.
 *Ex. Valider la proposition graphique de la bannière, Corriger la couleur des liens…*.
@@ -135,7 +135,7 @@ Les verbes couramment rencontrés : Ajouter, supprimer, corriger, valider, rense
 
 Une demande fonctionne sur le principe d’un message que l’on transmet en l’assignant à quelqu’un, cette assignation est importante car elle permet au destinataire de la demande d’être notifié de cette modification.
 
-**Je viens de recevoir une demande**
+**Je viens de recevoir une demande par email, que dois-je faire ?**
 
 Vous venez de recevoir un email avec une demande. Suivez simplement le lien fourni dans l’email pour la consulter.
 
