@@ -7,7 +7,9 @@ Ce guide décrit les usages les plus courants de l’outil Redmine.  Nous n’ab
 
 ## Définition de l’outil
 
-Redmine est dédié à la gestion de projet et d’équipes grâce aux outils suivants :
+Redmine est dédié à la gestion de projet et d’équipes et permet d’améliorer le suivi d’un projet en centralisant beaucoup d’aspects de la gestion d’un projet et de limiter les échanges par d’autres canaux de communication (Email, tchats, téléphone…)
+
+Redmine gère donc les nombreux aspects d’un projet :
 
 * **Des demandes**, les tâches à effectuer par les membres du projet;
 * **Des annonces**, un outil permettant de suivre l’actualité du projet;
@@ -50,13 +52,65 @@ Rendez-vous sur le lien *Ma page*. Par défaut cette espace vous propose :
 
 Cette page est personnalisable et vous permet d’ajouter et supprimer des outils complémentaires tout simplement en cliquant sur le lien situé en haut à droite *Personnaliser cette page*.
 
-Essayez de modifier cette espace personnel.
+Essayez de modifier cette espace personnel selon vos besoins.
+
+### 4. Page *Projets*
+
+Permet d’avoir une liste des projets présents dans Redmine. De cet écran il est possible
+
+* D’accéder à la page d’un projet particulier;
+* De créer un nouveau projet;
+* De lister toutes les demandes;
+* D’avoir un aperçu du temps passé sur ces projets;
+* et une page listant l’activité globale sur l’application.
+
+
+### 5. Page du projet (Aperçu)
+
+À partir de la page *Projets* sélectionnez un projet.
+
+L’écran affiché vous présente une navigation liée au projet (*Aperçu, activité, Roadmap, Demandes*…) et le tableau de bord de votre projet composé de plusieurs outils :
+
+#### 5.0 Onglet *Aperçu*
+
+* **Suivi des demandes** : Un aperçu sur l’ensemble des demandes du projet;
+* **Membres** : La liste des utilisateurs présents dans le projet selon leur profils;
+* **Dernières annonces** : Les derniers messages de l’onglet *Annonces* du projet;
+* **Des outils complémentaires**, permettant de saisir des temps sur le projet, de créer un nouveau sous-projet ou de fermer le projet en cours.
+
+#### 5.1 Activités du projet
+
+Tous les événements qui se sont déroulés sur le projet (Annonces, nouvelles demandes…).
+
+#### 5.2 Roadmap
+
+Permet de gérer des versions du projet, de voir l’avancée de ces versions et les demandes qui y sont rattachées.
+
+#### 5.3 Liste des demandes
+
+La liste des demandes liées à un projet.
+
+Au-dessus de la liste des demandes **un filtre plus complet** permettant de lister les demandes selon des critères poussés. À noter qu’il est possible d’enregistrer ces filtres afin de pouvoir les utiliser par la suite (ils sont alors présents dans la colonne de droite de l’écran).
+
+Sur la droite de l’écran, des filtres pré-enregistrés permettant de limiter la liste des demandes aux critères proposés.
+
+##### 5.3.1 Une demande 
+
+En cliquant sur une des demandes de la liste des demandes on arrive sur l’écran de détail de la demande permettant d’avoir une vue complète de la demande, ses infos de status, de priorité, d’assignation, les échanges qui y sont attachés, etc.
+
+Une barre d’outil est présente au-dessus de la fiche demande. 
+
+![sc03]
 
 
 
 
-[sc02] : redmine-qs-images/sc02.png
+
+
 [ident]: redmine-qs-images/sc01.png
+[sc02] : redmine-qs-images/sc02.png
+[sc03] : redmine-qs-images/sc03.png
+
 
 
 
