@@ -28,10 +28,34 @@ Rendez-vous sur l’adresse de votre Redmine.
 
 Saisissez vos identifiant et mot de passe. Sélectionnez la case à cocher *Rester connecté* pour éviter de voir cet écran à chacune de vos connexion.
 
+### 2. L’accueil
+
+Vous arrivez alors sur un écran vous présentant les dernières annonces et une liste des projets ayant été mis à jour récemment.
+
+Une barre de navigation située en haut vous permet d’accéder à *Accueil, Ma page, Projets et Aide*.
+
+**Accueil** : La page d’accueil de Redmine (la page courante)
+**Ma page** : Une page listant plusieurs infos vous concernant
+**Projets** : La liste de vos projets
+**Aide** : Un lien vers la documentation officielle de Redmine en Anglais.
+
+### 3. Page *Ma page*
+
+Rendez-vous sur le lien *Ma page*. Par défaut cette espace vous propose :
+
+* **les demandes** qui vous sont directement assignées;
+* **Un calendrier** vous proposant une disposition calendaire des infos de vos projets;
+* **Un résumé du temps passé** sur les demandes liées à vos projets;
+* **Annonces**, une reprise des dernières annonces déjà présentes sur la page d’accueil.
+
+Cette page est personnalisable et vous permet d’ajouter et supprimer des outils complémentaires tout simplement en cliquant sur le lien situé en haut à droite *Personnaliser cette page*.
+
+Essayez de modifier cette espace personnel.
 
 
 
 
+[sc02] : redmine-qs-images/sc02.png
 [ident]: redmine-qs-images/sc01.png
 
 
