@@ -108,8 +108,8 @@ Une barre d’outil est présente au-dessus de la fiche demande.
 
 
 [ident]: redmine-qs-images/sc01.png
-[sc02] : redmine-qs-images/sc02.png
-[sc03] : redmine-qs-images/sc03.png
+[sc02]: redmine-qs-images/sc02.png
+[sc03]: redmine-qs-images/sc03.png
 
 
 
