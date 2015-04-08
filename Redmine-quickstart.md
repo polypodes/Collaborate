@@ -1,16 +1,17 @@
 # Prise en main rapide de Redmine
 
-Ce guide décrit les usages les plus courants de l’outil Redmine.  Nous n’aborderons pas l’administration ou la configuration des projets, des utilisateurs.
+Ce guide décrit les usages les plus courants de l’outil Redmine.  Nous n’aborderons pas l’administration ou la configuration des projets, des utilisateurs… etc
 
-**C’est un guide de prise en main rapide**.
+**C’est un guide de prise en main rapide pour une utilisation quotidienne de l’outil**.
 
 
 ## Définition de l’outil
 
-Redmine est dédié à la gestion de projet et d’équipes et permet d’améliorer le suivi d’un projet en centralisant beaucoup d’aspects de la gestion d’un projet et de limiter les échanges par d’autres canaux de communication (Email, tchats, téléphone…)
+Redmine est dédié à la gestion de projet et permet d’améliorer le suivi d’un projet en centralisant beaucoup d’aspects de la gestion d’un projet et de limiter les échanges par d’autres canaux de communication (Email, tchats, téléphone…)
 
 Redmine gère donc les nombreux aspects d’un projet :
 
+* **Des membres**, les personnes agissant au sein d’un projet;
 * **Des demandes**, les tâches à effectuer par les membres du projet;
 * **Des annonces**, un outil permettant de suivre l’actualité du projet;
 * **Des documents**, comme son nom l’indique, un espace dédié au stockage de documents;
@@ -43,7 +44,7 @@ Une barre de navigation située en haut vous permet d’accéder à *Accueil, Ma
 
 ### 3. Page *Ma page*
 
-Rendez-vous sur le lien *Ma page*. Par défaut cette espace vous propose :
+Rendez-vous sur le lien *Ma page* (Situé en haut à droite). Par défaut cette espace vous propose :
 
 * **les demandes** qui vous sont directement assignées;
 * **Un calendrier** vous proposant une disposition calendaire des infos de vos projets;
@@ -56,7 +57,7 @@ Essayez de modifier cette espace personnel selon vos besoins.
 
 ### 4. Page *Projets*
 
-Permet d’avoir une liste des projets présents dans Redmine. De cet écran il est possible
+**Permet d’avoir une liste des projets présents dans Redmine. De cet écran il est possible**.
 
 * D’accéder à la page d’un projet particulier;
 * De créer un nouveau projet;
@@ -78,15 +79,15 @@ L’écran affiché vous présente une navigation liée au projet (*Aperçu, act
 * **Dernières annonces** : Les derniers messages de l’onglet *Annonces* du projet;
 * **Des outils complémentaires**, permettant de saisir des temps sur le projet, de créer un nouveau sous-projet ou de fermer le projet en cours.
 
-#### 5.1 Activités du projet
+#### 5.1 Onglet *Activités*
 
 Tous les événements qui se sont déroulés sur le projet (Annonces, nouvelles demandes…).
 
-#### 5.2 Roadmap
+#### 5.2 Onglet *Roadmap*
 
 Permet de gérer des versions du projet, de voir l’avancée de ces versions et les demandes qui y sont rattachées.
 
-#### 5.3 Liste des demandes
+#### 5.3 Onglet *Demandes*
 
 La liste des demandes liées à un projet.
 
@@ -98,11 +99,59 @@ Sur la droite de l’écran, des filtres pré-enregistrés permettant de limiter
 
 En cliquant sur une des demandes de la liste des demandes on arrive sur l’écran de détail de la demande permettant d’avoir une vue complète de la demande, ses infos de status, de priorité, d’assignation, les échanges qui y sont attachés, etc.
 
-Une barre d’outil est présente au-dessus de la fiche demande. 
+Une demande à un numéro d’identification indiqué par le symbole # suivi d’un numéro unique. (Ex. #3821)
+
+Une barre d’outil est présente au-dessus de la fiche demande et permet d’effectuer plusieurs tâches.
 
 ![sc03]
 
+L’essentiel de l’échange au sein d’un tâche se fait par le biais du bouton *Modifier* qui propose l’écran suivant :
 
+![sc043]
+
+Les éléments essentiels à comprendre de cet écran :
+
+* **Le sujet**, l’intitulé de la demande;
+* **La description** permet de fournir plus d’information à une demande en particulier;
+* **Le statut** est l’état de la demande (ce qui peut être différent selon votre propre outil);
+* **Priorité** définit une urgence particulière pour la demande;
+* **Assigné à** permet d’attacher une demande à un membre du projet et de l’alerter par email de la mise à jour de cette tâche;
+* **Catégorie** permet de donner un thème à la tâche: développement, intégration, graphisme, SEO… (ces options sont aussi variables selon votre installation de Redmine);
+* **% réalisé** le niveau d’avancement de la tâche;
+* **Temps passé**, simple à comprendre, permet d’ajouter du temps sur la tâche;
+* **Notes**, un espace permettant de commenter la modification que l’on fait sur la demande;
+* **Fichiers**, permet d’attacher des documents à la demande.
+
+
+
+
+## FAQ
+
+**Qu’est-ce qu’une demande** ?
+
+Dans l’idéal une demande désigne une tâche à effectuer et devrait commencer par un verbe évoquant cette action.
+*Ex. Valider la proposition graphique de la bannière, Corriger la couleur des liens…*.
+Les verbes couramment rencontrés : Ajouter, supprimer, corriger, valider, renseigner, saisir, modifier…
+
+Une demande fonctionne sur le principe d’un message que l’on transmet en l’assignant à quelqu’un, cette assignation est importante car elle permet au destinataire de la demande d’être notifié de cette modification.
+
+**Je viens de recevoir une demande**
+
+Vous venez de recevoir un email avec une demande. Suivez simplement le lien fourni dans l’email pour la consulter.
+
+**Je souhaite effectuer cette demande**
+
+Selon ce qui est demandé dans la tâche vous pouvez renseigner différents champs répondant à la demande: 
+
+* **Répondre** simplement en saisissant une info dans l’espace *Notes*;
+* **Fournir un document** en utilisant le formulaire *Fichiers*;
+* **Changer le statut** d’une tâche, pour la fermer, la rejeter… (selon les statuts proposés dans votre Redmine);
+
+**Une fois la demande effectuée vous pouvez assigner cette tâche à l’émetteur pour qu’il en soit informé**.
+
+**Je souhaite créer une tâche**
+
+Il vous faut aller dans le bon projet et tout simplement cliquer sur l’onglet *Nouvelle demande* et l’assigner par exemple à la personne en charge de votre projet.
 
 
 
@@ -110,6 +159,7 @@ Une barre d’outil est présente au-dessus de la fiche demande.
 [ident]: redmine-qs-images/sc01.png
 [sc02]: redmine-qs-images/sc02.png
 [sc03]: redmine-qs-images/sc03.png
+[sc043]: redmine-qs-images/sc04.png
 
 
 
