@@ -153,7 +153,9 @@ Selon ce qui est demandé dans la tâche vous pouvez renseigner différents cham
 
 Il vous faut aller dans le bon projet et tout simplement cliquer sur l’onglet *Nouvelle demande* et l’assigner par exemple à la personne en charge de votre projet.
 
+## Pour aller plus loin
 
+* [La documentation officielle en français](http://www.redmine.org/projects/redmine/wiki/FrGuide)
 
 
 [ident]: redmine-qs-images/sc01.png
