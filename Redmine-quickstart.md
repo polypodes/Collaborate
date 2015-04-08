@@ -20,9 +20,14 @@ Ce sont les outils de Redmine dès son installation mais certains plugins peuven
 
 ## 1. S’identifier
 
+(Les images présentées peuvent varier selon votre installation de Redmine ou le thème attaché à votre profil utilisateur.)
+
 Rendez-vous sur l’adresse de votre Redmine.
 
 ![ident]
+
+Saisissez vos identifiant et mot de passe. Sélectionnez la case à cocher *Rester connecté* pour éviter de voir cet écran à chacune de vos connexion.
+
 
 
 
