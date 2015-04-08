@@ -17,8 +17,8 @@ Redmine est dédié à la gestion de projet et d’équipes grâce aux outils su
 
 Ce sont les outils de Redmine dès son installation mais certains plugins peuvent lui ajouter des nouvelles fonctionnalités.
 
-
-## 1. S’identifier
+## Prise en main
+### 1. S’identifier
 
 (Les images présentées peuvent varier selon votre installation de Redmine ou le thème attaché à votre profil utilisateur.)
 
