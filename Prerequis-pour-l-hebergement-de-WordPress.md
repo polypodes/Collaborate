@@ -134,12 +134,13 @@ Livrables de l'hébergeur attendues par l'Agence pour pouvoir déployer le site 
 
 (serveur dédié uniquement) Livrable optionnels :
 
-Si l'hébergeur utilise ces outils suivant, il peut fournir la configuration 
+Eventuellement, si l'hébergeur utilise ces outils suivant, il peut fournir la configuration de l'environnement de production, dans un format
 
 - Chef
-- Puppet de l'environnement de production,
-
-ou une image Docker qui sera utilisée par l'équipe de développement pour reproduire en local l'environnement de production.
+- Puppet 
+- ou une image Docker
+ 
+Ces éléments de configuration pourraient alors être utilisés par l'équipe de développement pour reproduire en local l'environnement de production.
 
 ## 11. Limites, conseil et assistance
 
