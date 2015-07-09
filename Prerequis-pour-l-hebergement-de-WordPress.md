@@ -67,7 +67,7 @@ des corrections ou évolutions, notamment lors de la recette.
 
 Le compte SSH utilisé par l'Agence Les Polypodes n'a pas besoin d'être `sudoer`.
 
-## 7. Apache2 
+## 6. Apache2 
 
 Mods d'Apache à activer :
 
@@ -80,7 +80,7 @@ setenvif (optionnel)
 
 Un hébergement annoncé compatible avec WordPress comporte en général déjà le _mod_ `rewrite` obligatoire.
 
-## 8. PHP
+## 7. PHP
 
 PHP 5, version stable
 
@@ -104,7 +104,7 @@ Jusqu'à PHP 5.4.x inclus, l'Agence recommande d'ajouter un accélérateur perme
 
 À partir de PHP 5.5.x, PHP intègre son propre moteur de cache d'Opcode, [Zend Opcache](http://en.wikipedia.org/wiki/List_of_PHP_accelerators#Zend_Opcache_.28ex._Zend_Optimizer.2B.29). Dès lors, il n'est pas requis d'installer un autre accélérateur.
 
-## 9. MySQL
+## 8. MySQL
 
 L'Editeur de WordPress, jusqu'à la version 4.2.2, requiert a minima MySQL en version 5.0 
 et recommande MySQL 5.5 ou supérieure stable
@@ -123,7 +123,7 @@ INDEX, ALTER, CREATE TEMPORARY TABLES, LOCK TABLES
 L'installation de NodeJs et NPM dernières versions stables est [très simple à réaliser en utilisant un PPA](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-an-ubuntu-14-04-server#HowToInstallUsingaPPA).
 NodeJs n'est pas utilisé ici en tant que serveur web mais en tant qu'utilitaire CLI uniquement.
 
-## 10. Livrables
+## 9. Livrables
 
 Livrables de l'hébergeur attendues par l'Agence pour pouvoir déployer le site en préproduction ou en production :
 
@@ -142,7 +142,7 @@ Eventuellement, si l'hébergeur utilise ces outils suivant, il peut fournir la c
  
 Ces éléments de configuration pourraient alors être utilisés par l'équipe de développement pour reproduire en local l'environnement de production.
 
-## 11. Limites, conseil et assistance
+## 10. Limites, conseil et assistance
 
 En-dehors des points indiqués comme optionnels, tous ces points sont importants et peuvent devenir bloquants pour le succès du déploiement de l’application web. Sur ces points, l'Agence Les Polypodes demande a être prévenue dès qu'une incompréhension ou un doute survient du côté du Client ou de l'Hébergeur qui doit livrer l’hébergement et éventuellement assurer l’infogérance de l’application, et se tient prête à expliquer le détail et la raison de chaque pré-requis. 
 
