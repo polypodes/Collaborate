@@ -57,17 +57,15 @@ de site web basés sur WordPress basée sur PHP 5.x, dernière version stable.
 
 ## 5. Prérequis généraux liés aux rôles et droits Unix/Linux :
 
-Dans l'utilisation des accès SSH au serveur web,
-le comptes utilisateur Linux utilisé par l'Agence Les Polypodes n'a pas besoin d'être `sudoer`,
-à partir du moment où un sysadmin est responsable de la maintenance et du monitoring de ce serveur.
-
 Pour automatiser le déploiement du site et des correction / évolution, l'Agence a besoin 
 
-- soit un accès SSH : L'accès SSH permet notamment le bon déploiement, via GIT ou rsync, des mises à jours et évolutions du site, et est rendu obligatoire par l'utilisation en ligne de commande d'outils de build (make, grunt, gulp, drush, etc.).
-- soit, à défaut d'accès SSH, un déploiement possible via Git (type Heroku);
+- soit un accès SSH : L'accès SSH permet notamment le bon déploiement, via GIT ou rsync, des mises à jours et évolutions du site, et est rendu obligatoire par l'utilisation en ligne de commande d'outils de déploiement ou de build (git, make, grunt, gulp, etc.).
+- soit, à défaut, un déploiement possible via Git (type Heroku);
 
 **Un accès FTP uniquement ne suffit pas** à automatiser le déploiement successif
 des corrections ou évolutions, notamment lors de la recette.
+
+Le compte SSH utilisé par l'Agence Les Polypodes n'a pas besoin d'être `sudoer`.
 
 ## 7. Apache2 
 
