@@ -59,7 +59,7 @@ de site web basés sur WordPress basée sur PHP 5.x, dernière version stable.
 
 Pour automatiser le déploiement du site et des correction / évolution, l'Agence a besoin 
 
-- soit un accès SSH : L'accès SSH permet notamment le bon déploiement, via GIT ou rsync, des mises à jours et évolutions du site, et est rendu obligatoire par l'utilisation en ligne de commande d'outils de déploiement ou de build (git, make, grunt, gulp, etc.).
+- soit un accès SSH : L'accès SSH permet notamment le bon déploiement, via GIT, des mises à jours et évolutions du site, et est rendu obligatoire par l'utilisation en ligne de commande d'outils de déploiement ou de build (git, make, grunt, gulp, etc.).
 - soit, à défaut, un déploiement possible via Git (type Heroku);
 
 **Un accès FTP uniquement ne suffit pas** à automatiser le déploiement successif
