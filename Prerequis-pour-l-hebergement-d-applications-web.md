@@ -4,7 +4,7 @@
 
 *Résumé* : Ce document liste les pré-requis de l'Agence [Les Polypodes](http://lespolypodes.com/) pour réaliser un déploiement d'application Symfony2 sur un serveur web. Ce document reprend la documentation officielle de Symfony2 concernant les prérequis techniques, et détaille une configuration optimale pour l'industrialisation du déploiement. Ces éléments sont non exhaustifs : la configuration définitive est laissée à l’appréciation de l’Hébergeur qui maintient ce serveur et du Client qui reste le donneur d'ordre final.
 
-* version : 1.5.2
+* version : 1.5.3
 * auteurs : [Ronan Guilloux](mailto:ronan@lespolypodes.com), [Les Polypodes](http://lespolypodes.com/) SARL (Nantes, France)
 * licence : [CC by-sa 3.0 fr](http://creativecommons.org/licenses/by-sa/3.0/fr/)
 * [Ce document libre et ouvert est téléchargeable en ligne](https://github.com/polypodes/Collaborate/blob/master/Prerequis-pour-l-hebergement-d-applications-web.md) ([version PDF](https://gitprint.com/polypodes/Collaborate/blob/master/Prerequis-pour-le-deploiement-de-Drupal.md))
@@ -30,7 +30,7 @@ Le but de ce document est de donner les éléments minimaux pour l'hébergement 
 
 ## 4. Prérequis généraux liés à l'OS : 
 
-* OS Linux, dernière version stable (LTS optionnel, pas formellement demandée). Préférence de l'équipe pour GNU/Linux Debian ou Ubuntu LTS dans leurs dernières version stables ;
+* OS Linux, dernière version stable (LTS optionnel, pas formellement demandée). Préférence de l'équipe pour GNU/Linux Debian ou Ubuntu LTS dans leurs dernières versions stables ;
 * Dual Core *minimum* + 4 Giga RAM *minimum* ;
 * architecture 64 bits ;
 * un accès SSH avec un compte utilisateur Unix/Linux (cf. plus loin) ;
@@ -38,16 +38,16 @@ Le but de ce document est de donner les éléments minimaux pour l'hébergement 
 
 ## 5. Prérequis généraux liés aux rôles et droits Unix/Linux :
 
-Dans l'utilisation des accès SSH au serveur web, le comptes utilisateur Linux utilisé par l'Agence Les Polypodes n'a pas besoin d'être `sudoer`, à partir du moment où un sysadmin est responsable de la maintenance et du monitoring de ce serveur.
+Dans le cadre de l'utilisation des accès SSH au serveur web, le compte utilisateur Linux utilisé par l'Agence Les Polypodes n'a pas besoin d'être `sudoer`, à partir du moment où un sysadmin est responsable de la maintenance et du monitoring de ce serveur.
 
-L'Agence demande 
+L'Agence demande :
 - un accès linux avec un compte `polypodes` ;
-- des droits suffisant pour éditer une crontab ;
-- des droits suffisant pour écrire dans un répertoire dédié au projet ;
-- des droits suffisant pour lire le log Apache2 du site web (accès et erreurs) ;
-- un répertoire `home` permettant de stocker la configuration de _dotfiles_ (`.bashrc`, `.bash_history`, etc.)
+- des droits suffisants pour éditer une crontab ;
+- des droits suffisants pour écrire dans un répertoire dédié au projet ;
+- des droits suffisants pour lire le log Apache2 du site web (accès et erreurs) ;
+- un répertoire `home` permettant de stocker la configuration de _dotfiles_ (`.bashrc`, `.bash_history`, etc…) ;
 - l'accès à un shell fonctionnel : `bash`, ou idéalement `zsh` ;
-- il est utile que cet utilisateur appartiennt au `usergroup` utilisé par Apache2 (`:www-data`).
+- il est utile que cet utilisateur appartienne au `usergroup` utilisé par Apache2 (`:www-data`).
 
 Le répertoire d'hébergement du site web à déployer (par exemple `/var/www/NomDuProjet/[RacineDuSiteWeb]`) devra être accessible en écriture pour l'utilisateur linux `polypodes`. Suggestion: `chown www-data:www-data` + `chmod 775`, l'utilisateur linux polypodes étant déjà membre du groupe `:www-data`.
 
@@ -55,7 +55,7 @@ L'accès SSH permet notamment le bon déploiement, via GIT ou rsync, des mises �
 
 ## 6. Préparation des déploiements successifs (releases majeures, correctifs, etc.)
 
-Le process de mise en (pre-)production de l'Agence se base sur une structure en `releases`, avec un `DocRoot` d'Apache2 pointant vers la **dernière release courante**, via un mécanisme de liens symbolique :
+Le process de mise en (pré-)production de l'Agence se base sur une structure en `releases`, avec un `DocRoot` d'Apache2 pointant vers la **dernière release courante**, via un mécanisme de liens symbolique :
 
 ```bash
 ➜  myServer  tree
@@ -63,6 +63,7 @@ Le process de mise en (pre-)production de l'Agence se base sur une structure en 
 ├── [me  2237]  Makefile
 ├── [me    55]  current -> releases/2014-07-04     <- Apache2 vhost DocRoot
 ├── [me    55]  old -> releases/2014-07-01         <- rollback-able recent release
+├── [me    55]  preprod -> releases/preprod        <- pre-production folder
 ├── [me   170]  releases                           <- all releases
 └── [me   170]  uploads                            <- shared, cross-releases folder
 ➜  myServer
@@ -70,6 +71,7 @@ Le process de mise en (pre-)production de l'Agence se base sur une structure en 
 
 - `current` est le `DocumentRoot` du *virtualhost* dans Apache2 ;
 - `old` est une release précédente, sur lequel on peut faire un *rollback* ;
+- `preprod` est la release de préproduction, servant au test des évolutions futures et à la préparation des contenus à passer en production, sur laquelle pointe un sous-domaine dédié (preprod.mondomaine.tld) ;
 - `releases` est le répertoire contenant toutes les *releases* ;
 - `uploads` est un répertoire partagé entre toutes les *releases*, contenant les fichiers et médias envoyés par le webmaster sur le serveur (images, sons, vidéos, PDFs, etc.). Un lien symbolique rend disponible ce répertoire dans le dossier de chaque *release*.
 
@@ -92,12 +94,11 @@ Ce mécanisme de mise en (pre-)production basé sur des **releases** est courant
 ➜  myServer
 ```
 
-Du point de vue de l'hébegement, se mécanisme nécessite simplement que le `DocRoot` du vhost d'Apache2 soit connu de l'Agence, et que la directive `Options FollowSymLinks` y soit présente. 
+Du point de vue de l'hébegement, ce mécanisme nécessite simplement que le `DocRoot` du vhost d'Apache2 soit connu de l'Agence, et que la directive `Options FollowSymLinks` y soit présente. 
 
 ## 7. Apache2 
 
-
-Les livrables attendus par l'Agence comportent un vhost par environnement (preproduction et production), avec si possible la directive `AllowOverride All`. Apache2 doit être capable de gérér les liens symboliques et permettre l'utilisation des fichiers `.htacess`.
+Les livrables attendus par l'Agence comportent un vhost par environnement (preproduction et production), avec si possible la directive `AllowOverride All`. Apache2 doit être capable de gérér les liens symboliques et permettre l'utilisation des fichiers `.htaccess`.
 
 Mods d'Apache à activer :
 
@@ -168,13 +169,13 @@ A titre d'information uniquement, les préconisations de mémoire limite allouab
 
 ### Sécurité et mise à jour des logiciels côté serveur
 
-A titre d'information, pour évaluer la présence de vulnérabilités critiques éventuelle dans la version de PHP installée, l'Agence utilise [versionscan](https://github.com/psecio/versionscan) et [iniscan](https://github.com/psecio/iniscan).
+A titre d'information, pour évaluer la présence de vulnérabilités critiques éventuelles dans la version de PHP installée, l'Agence utilise [versionscan](https://github.com/psecio/versionscan) et [iniscan](https://github.com/psecio/iniscan).
 
 ## 9. MySQL
 
-L'Hébergeur est responsable de la backup des bases de données et de la bonne configuration des ressources allouées à MySQL.
+L'Hébergeur est responsable de la sauvegarde des bases de données et de la bonne configuration des ressources allouées à MySQL.
 
-* Création d'une base de preproduction et d'une base de production
+* Création d'une base de préproduction et d'une base de production
 * Mise en place d'un utilisateur MySQL auquel on permettra les actions suivantes :
 
 ```SQL
@@ -186,15 +187,14 @@ INDEX, ALTER, CREATE TEMPORARY TABLES, LOCK TABLES
 
 Dans le cadre d'un accès SSH, logiciels à installer :
 
-Obligatoire si accès SSH :
-
+### Logiciels obligatoires pour l'accès SSH
 ```
 git vim curl nodejs npm
 ```
 
-L'installation de NodeJs et NPM dernières versions stables est [très simple à réaliser en utilisant un PPA](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-an-ubuntu-14-04-server#HowToInstallUsingaPPA). NodeJs n'est pas utilisé ici en tant que serveur web mais en tant qu'utilitaire CLI uniquement.
+L'installation de NodeJs et NPM en dernières versions stables est [très simple à réaliser en utilisant un PPA](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-an-ubuntu-14-04-server#HowToInstallUsingaPPA). NodeJs n'est pas utilisé ici en tant que serveur web mais en tant qu'utilitaire CLI uniquement.
 
-Optionnels (utiles pour le bon déploiement)
+### Logiciels optionnels (utiles pour le bon déploiement)
 
 ```
 imagemagick rsync tig tree manpages-fr manpages-fr-extra manpages-dev 
@@ -209,7 +209,7 @@ Applications à installer :
 Livrables obligatoires attendues par l'Agence :
 
 * accès SSH, URL de Phpmyadmin, et leurs différents identifiants d'accès ;
-* URL de pré-production ;
+* URL de préproduction ;
 * URL de production.
 
 Livrable optionnels :
@@ -218,10 +218,8 @@ Configuration Puppet de l'environnement de production, qui sera utilisée par l'
 
 ## 12. Limites, conseil et assistance
 
-En-dehors des points indiqués comme optionnels, tous ces points sont importants et peuvent devenir bloquants pour le succès du déploiement de l’application web. Sur ces points, l'Agence Les Polypodes demande a être prévenue dès qu'une incompréhension ou un doute survient du côté du Client ou de l'Hébergeur qui doit livrer l’hébergement et éventuellement assurer l’infogérance de l’application, et se tient prête à expliquer le détail et la raison de chaque pré-requis. 
+En-dehors des points indiqués comme optionnels, tous ces points sont importants et peuvent devenir bloquants pour le succès du déploiement de l’application web. Sur ces points, l'Agence Les Polypodes demande à être prévenue dès qu'une incompréhension ou un doute survient du côté du Client ou de l'Hébergeur qui doit livrer l’hébergement et éventuellement assurer l’infogérance de l’application, et se tient prête à expliquer le détail et la raison de chaque pré-requis. 
 
 Il revient au Client Final de créer les conditions et les occasions de dialogues entre l’hébergeur et l'Agence pour la bonne conduite et le succès du projet. 
 
-L'Agence Les Polypodes se tient prêt à planifier des jours supplémentaires de conseils et d'assistance à maîtrise d'ouvrage pour aider le Client Final dans la conduite de ce projet, sur la base d'une prestation de régie de XXX € jour / homme, frais de déplacement non inclus.
-
-
+L'Agence Les Polypodes se tient prête à planifier des jours supplémentaires de conseils et d'assistance à maîtrise d'ouvrage pour aider le Client Final dans la conduite de ce projet, sur la base d'une prestation de régie dont le montant est à définir ensemble.
