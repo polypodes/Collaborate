@@ -325,7 +325,7 @@ Backup manual test (as `root`):
 ```bash
 cd
 automysqlbackup
-tree /var/backup/mysql
+tree /var/backups/mysql
 ```
 
 ## Appendix
